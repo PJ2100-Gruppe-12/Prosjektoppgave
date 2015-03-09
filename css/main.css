@@ -14,7 +14,7 @@ body{
 }
 
 #loginBackground{
-	height: 250px;
+	height: auto;
 	width: 500px;
 	background-color: rgba(40,0,180,0.5);
 	position: absolute;
@@ -53,7 +53,7 @@ body{
 	left: 0;
 	top: 0;
 }
-#password{
+.inputField {
 	background-color: rgb(0,0,250);
 	height: 40px;
 	width: 450px;
@@ -63,14 +63,12 @@ body{
 	text-indent: 20px;
 	text-align: center;
 }
+}
 
-#userName{
-	background-color: rgb(0,0,250);
-	height: 40px;
-	width: 450px;
-	border-radius: 90px;
-	font-size: 37px;
-	color: rgb(0,0,0);
-	text-indent: 20px;
-	text-align: center;
+
+#register {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+
 }
