@@ -13,19 +13,64 @@ body{
 	left: 40%;
 }
 
-#login{
+#loginBackground{
+	height: 250px;
+	width: 500px;
+	background-color: rgba(40,0,180,0.5);
 	position: absolute;
-	left: 42%;
-	top:30%;
-	
+	left: 33%;
+	top: 30%;
+	border: solid black 2px;
+}
+#loginText{
+	font-size: 20px;
+	color: white;
+	top: 20px;
+	position:absolute;
+	left: 10px;
+	width: 500px;
+	text-align: center;
 
 }
 
+#login{
+	position: relative;
+	left: 0%;
+	top: 25%;	
+	font-family: helvetica;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
 #header{
-	height: 260px;
+	height: 266px;
 	width: 100%;
 	background-color: rgba(40,0,180,0.5);
 	position: absolute;
-	border-top: 0;
+	border: solid black 2px;
 	margin-top: 0;
+	left: 0;
+	top: 0;
+}
+#password{
+	background-color: rgb(0,0,250);
+	height: 40px;
+	width: 450px;
+	border-radius: 30px;
+	font-size: 37px;
+	color: rgb(0,0,0);
+	text-indent: 20px;
+	text-align: center;
+}
+
+#userName{
+	background-color: rgb(0,0,250);
+	height: 40px;
+	width: 450px;
+	border-radius: 90px;
+	font-size: 37px;
+	color: rgb(0,0,0);
+	text-indent: 20px;
+	text-align: center;
 }
