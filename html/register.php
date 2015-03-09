@@ -42,8 +42,7 @@ register($_POST['un'], $_POST['pw'], $_POST['cpw']);
 	</div>
 </body>
 </html>
-<?php 
-?>
+s
 
 
 
