@@ -13,7 +13,7 @@ function login($username, $password) {
 	$a = mysql_fetch_assoc($result);
 
 	if (!empty($a)) {
-		header("Location: booking.php");
+		header("Location: booking.html");
 	}
 	else {
 		echo "Failure!";

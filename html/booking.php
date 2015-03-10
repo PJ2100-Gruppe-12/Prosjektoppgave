@@ -1,8 +1,6 @@
 <?php
 include 'lib.php';
-if (!empty($_POST)) {
-	login($_POST['un'], $_POST['pw']);
-}
+getBooking();
 ?>
 <DOCTYPE html>
 <html>
