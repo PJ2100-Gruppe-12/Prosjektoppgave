@@ -34,7 +34,7 @@ if (!empty($_POST)) {
 				<input class = "inputField" type="password" name="pw">
 				<br/>
 				<br/>
-				<input id= "submit" type="submit" value="Logg inn"  />
+				<input id= "submit" type="submit" value="Logg inn">
 			</form>	
 		</div>
 	</body>

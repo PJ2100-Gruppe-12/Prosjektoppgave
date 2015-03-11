@@ -20,10 +20,13 @@ function login($username, $password) {
 	}
 }
 
-function register($username, $password, $confirmPassword) {
+function register($username, $password, $confirmPassword,$sn, $pn, $tlf, $email) {
 	if ($password == $confirmPassword) {
-		$query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+		
+		$query = "INSERT INTO users (username, password, studentnr,pNr,tlf,email) 
+		VALUES ('$username', '$password', '$sn','$pn','$tlf','$email')";
 		$result = mysql_query($query);
+
 
 		echo $result;
 		if ($result) {

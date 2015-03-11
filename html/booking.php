@@ -13,7 +13,8 @@ getBooking();
 
 <body>
 	<!-- BODY -->
-<div id = "bakgrunn"></div>
+	<div id = "bg"></div>
+	<div id = "bakgrunn"></div>
 	<div id = "header">
 	<div id = "logo"><img src="../pic/logo.png"></div>
 	</div>
