@@ -1,5 +1,7 @@
 <?php
 
+
+
 // Lib containing all db methods
 
 mysql_connect("localhost", "root", "");
@@ -10,14 +12,20 @@ function login($username, $password) {
 	$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 
 	$result = mysql_query($query);
-	$a = mysql_fetch_assoc($result);
+	$rows = mysql_fetch_assoc($result);
 
-	if (!empty($a)) {
-		header("Location: booking.html");
+	if (!empty($rows)) {
+		$_SESSION['ul'] = $rows['id'];
+		header("Location: booking.php");
 	}
 	else {
 		echo "Failure!";
 	}
+}
+
+function logout() {
+	session_destroy();
+	header("Location: login.php");
 }
 
 function register($username, $password, $confirmPassword,$sn, $pn, $tlf, $email) {
@@ -41,7 +49,34 @@ function register($username, $password, $confirmPassword,$sn, $pn, $tlf, $email)
 	}
 }
 
-function getBooking() {
+function getBooking($id) {
+
+	if ($id == "0") {
+		// henter alle rom
+		$r = mysql_query("SELECT * FROM rooms") or die(mysql_error());
+		
+		if(!$r) {
+			echo "die"; 
+		}
+		
+		while ($row = mysql_fetch_assoc($r)) {
+			$rooms[] = $row;
+		}
+
+		// henter alle bookinger
+		$r = mysql_query("SELECT * FROM bookings");
+
+		// setter inn variablen 'free' i rommene, så vi kan bruke det til å vise frem om rom er ledig eller ikke
+		while ($row = mysql_fetch_assoc($r)){
+			$rooms[$row['roomId']]['free'] = true; // TODO: sjekk om den er ledig (er valgt tid mellom bookingens start og end ($row['start'] etc) )
+		}
+		if ($rooms[$row]['free']==true) {
+			echo "test";
+		}
+		// returnerer det modifiserte rom-arrayet
+		return $rooms;
+
+	}
 
 }
 

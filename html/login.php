@@ -1,23 +1,16 @@
 <?php
 include 'lib.php';
+include 'header.php';
+if (isset($_SESSION['ul']) && !empty($_SESSION['ul'])) {
+	header("Location: booking.php");
+}
 if (!empty($_POST)) {
 	login($_POST['un'], $_POST['pw']);
 }
 ?>
 <DOCTYPE html>
 	<html>
-	<head>
-		<!-- HEAD -->
-		<title>BookingSide</title>
-		<link rel="stylesheet" type="text/css" href="../css/main.css">
-		<meta charset="utf-8">
-	</head>
-
-	<body>
-		<!-- BODY -->
-		<div id = "bg"></div>
-		
-		<div id = "logo"><img src="../pic/logo.png"></div>
+	
 		
 		<div id = "loginBackground">
 			<div id = "loginText">Her logger du inn din bruker til vårt bookingsystem</div>

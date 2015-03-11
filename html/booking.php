@@ -1,23 +1,24 @@
 <?php
 include 'lib.php';
-getBooking();
-?>
-<DOCTYPE html>
-<html>
-<head>
-	<!-- HEAD -->
-	<title>BookingSide</title>
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<meta charset="utf-8">
-</head>
+include 'header.php';	
+$rooms = getBooking("0");
 
-<body>
-	<!-- BODY -->
-	<div id = "bg"></div>
+	
+
+
+
+?>
+
 	<div id = "bakgrunn"></div>
-	<div id = "header">
-	<div id = "logo"><img src="../pic/logo.png"></div>
-	</div>
+	<div id = "header"></div>
+
+	<?php 
+		for ($i=0; $i < count($rooms); $i++) { 
+			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "box">'.$rooms[$i]['name'].'</div></a>';	
+		}
+
+	?>
+
 	
 	
 </body>
