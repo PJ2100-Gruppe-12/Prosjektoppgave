@@ -1,29 +1,46 @@
 body {
-    background-image: url(../Assets/Bilder/bg-fjell-sol.png);
-    background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
 }
 h1{
     align-content: center;
     text-align: center;
 }
 #header{
-    width: 300px;
+    width: 960px;
 	height: 380px;
     margin: 0 auto;
 }
-#logo{
+#back{
+    background-image: url(../Assets/Bilder/bg-fjell-sol.png);
+    background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
+    position: absolute;
+    top: 10px;
+    height: 418px;
+    width: 1300px;
+    z-index: 0;
+}
+#logo{
+    position: absolute;
     height: 270px;
     width: 240px;
     background-repeat: no-repeat;
     background-image: url(../Assets/Bilder/logo.png);
+    z-index: 1;
+}
+nav {
+  margin-top: 40px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0);
+}
+#nav {
+  background: Purple;
 }
 #goodbye{
-    margin-top: 100px;
-    text-align: center;
-    color: red;
-    font-size: 30px;
+  color: orange;
+  font-size: 26px;
+  text-decoration: none;
+  padding: 0 10px;
+  margin: 0 10px;
 }
