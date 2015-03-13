@@ -29,22 +29,21 @@ h1{
     z-index: 1;
 }
 #wrap{
-	width: 9600px;
 	height: 600px;
+    width: 960px;
     margin: 0 auto;
-    position: absolute;
 }
 #wrap2{
     width: 445px;
 	height: 600px;
-    margin-left: 0px;
+    margin-left: 80px;
     position: absolute;
 }
 #wrap3{
-    width: 445px;
+    width: 500px;
 	height: 600px;
     margin-left: 80px;
-    margin-top: 500px;
+    margin-top: 550px;
     position: absolute;
 }
 #wrap4{
@@ -57,19 +56,51 @@ h1{
     width: 445px;
 	height: 600px;
     margin-left: 600px;
-    margin-top: 500px;
+    margin-top: 550px;
     position: absolute;
 }
 .Room1, .Room2, .Room5, .Room6, .Room9, .Room10, .Room13, .Room14{
-    background-color: #b0d7f2;
-    height: 150px;
-    width: 150px;
-    border: ridge black;
-    margin: 20px;
+    background-image: url(../Assets/Bilder/RoomLiten.png);
+    height: 144px;
+    width: 184px;
+    margin: 9px;
     float: left;
-    text-align: center;
-    font-size: 74px;
-    
+}
+#filterWrap{
+    height: 210px;
+    width: 960px;
+    margin: 0 auto;
+}
+#projector{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+}
+#projector1:target > .RoomStor1 > .RoomStor1:hover{
+}
+input[type=checkbox]:checked ~ projector1{
+
+
+}
+#projector:active{
+    opacity: 0;
+}
+.Room1:hover, .Room2:hover, .Room5:hover, .Room6:hover, .Room9:hover, .Room10:hover, .Room13:hover, .Room14:hover{
+    background-image: url(../Assets/Bilder/2pers.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    border: ridge 10px;
+}
+.RoomStor1, .RoomStor2, .RoomStor3, .RoomStor4{
+    height: 294px;
+    width: 399px;
+    background-image: url(../Assets/Bilder/RoomStor.png)
+}
+.RoomStor1:hover, .RoomStor2:hover, .RoomStor3:hover, .RoomStor4:hover{
+    background-image: url(../Assets/Bilder/4pers.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    border: ridge 10px;
 }
  .Room3, .Room4, .Room7, .Room8, .Room11, .Room12, .Room15, .Room16{
     background-color: #b0d7f2;
@@ -81,9 +112,6 @@ h1{
     text-align: center;
     font-size: 74px;
  }
-.Room1:hover, .Room2:hover, .Room3:hover, .Room4:hover, .Room5:hover, .Room6:hover, .Room7:hover, .Room8:hover, .Room9:hover, .Room10:hover, .Room11:hover, .Room12:hover, .Room13:hover, .Room14:hover, .Room15:hover, .Room16:hover{
-    background-color: red;
-}
 nav{
   margin-top: 40px;
   padding: 24px;
