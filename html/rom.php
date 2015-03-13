@@ -52,9 +52,6 @@
 		<option value="20" Name = "tid">20:00</option>
 	</select>
 	<input id= "submit" type="submit" value="SUBMIT">
-
-	<?php $submit = "tid";
-	echo $submit;?>
-
+	
 </body>
 </html>

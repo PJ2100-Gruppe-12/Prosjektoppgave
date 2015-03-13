@@ -1,4 +1,5 @@
 <?php
+//inkluderer lib og header (lib er funksjonene, + header som er for layout.)
 include 'lib.php';
 include 'header.php';
 if (isset($_SESSION['ul']) && !empty($_SESSION['ul'])) {
@@ -8,8 +9,6 @@ if (!empty($_POST)) {
 	login($_POST['un'], $_POST['pw']);
 }
 ?>
-<DOCTYPE html>
-	<html>
 	
 		
 		<div id = "loginBackground">
