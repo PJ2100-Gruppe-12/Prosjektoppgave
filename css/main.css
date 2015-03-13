@@ -134,3 +134,10 @@ a.rom-link {
 	display: block;
 	width: 100px;
 }
+
+.ledig{
+	height: 100px;
+	width: 100px;
+	background-color: green;
+	
+}

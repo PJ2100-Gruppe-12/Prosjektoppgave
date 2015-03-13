@@ -9,8 +9,7 @@ $rooms = getBooking("0");
 
 ?>
 
-	<div id = "bakgrunn"></div>
-	<div id = "header"></div>
+	
 
 	<?php 
 		for ($i=0; $i < count($rooms); $i++) { 

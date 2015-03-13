@@ -70,9 +70,7 @@ function getBooking($id) {
 		while ($row = mysql_fetch_assoc($r)){
 			$rooms[$row['roomId']]['free'] = true; // TODO: sjekk om den er ledig (er valgt tid mellom bookingens start og end ($row['start'] etc) )
 		}
-		if ($rooms[$row]['free']==true) {
-			echo "test";
-		}
+		
 		// returnerer det modifiserte rom-arrayet
 		return $rooms;
 
