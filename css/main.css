@@ -139,5 +139,10 @@ a.rom-link {
 	height: 100px;
 	width: 100px;
 	background-color: green;
-	
+
+}
+#ikkeledig{
+	height: 100px;
+	width: 100px;
+	background-color: red;	
 }

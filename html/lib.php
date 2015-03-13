@@ -54,7 +54,7 @@ function getBooking($id) {
 	if ($id == "0") {
 		// henter alle rom
 		$r = mysql_query("SELECT * FROM rooms") or die(mysql_error());
-		
+		//error 
 		if(!$r) {
 			echo "die"; 
 		}
@@ -73,6 +73,7 @@ function getBooking($id) {
 		
 		// returnerer det modifiserte rom-arrayet
 		return $rooms;
+
 
 	}
 
