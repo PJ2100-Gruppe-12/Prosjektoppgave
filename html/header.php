@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if ((!isset($_SESSION['ul']) || empty($_SESSION['ul'])) && empty($_GET['ul'])) {
 	header("Location: login.php?ul=false");
@@ -19,10 +19,12 @@ if (isset($_GET['lo']) && $_GET['lo'] == "true") {
 
 	<body>
 		<!-- BODY -->
-		<div id = "bg"></div>
-		
-		<div id = "logo"><img src="../pic/logo.png"></div>
-		<?php if (isset($_SESSION['ul']) && !empty($_SESSION['ul'])) {
+		<div id ="wrapper">
+			<div id = "bg"></div>
+			<div id = "logo"><img src="../pic/logo.png"></div>
+		</div>
+<?php
+			if ((isset($_SESSION['ul'])) && !empty($_SESSION['ul'])) {
 			echo '<a href="booking.php?lo=true">Logg ut</a>';
 		}
 		
