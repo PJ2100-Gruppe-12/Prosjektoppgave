@@ -40,7 +40,7 @@ function register($username, $password, $confirmPassword,$sn, $pn, $tlf, $email)
 
 
 		echo $result;
-		//hvis result har data sucess
+		//hvis result har data success
 		if ($result) {
 			echo "Success!";
 			header("Location: login.php");

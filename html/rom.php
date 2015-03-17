@@ -5,7 +5,9 @@
 	//	addBooking(userID['un'], $_POST['pw'], $_POST['cpw'], $_POST['sn'], $_POST['pn'],$_POST['tlf'], $_POST['email']);
 	//}
 
-	$urlid = $_GET['id'] ;
+
+
+	$urlid = $_GET['id'];
 	$result = mysql_query("SELECT * FROM bookings where roomId ='$urlid'") or die(mysql_error());
 	$array = mysql_fetch_assoc($result);
 	if(!$result) {
@@ -62,6 +64,7 @@
 	 
 <?php
 ?>
+
 	
 </body>
 </html>
