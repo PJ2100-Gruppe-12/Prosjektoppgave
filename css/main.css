@@ -4,7 +4,7 @@
 	width:1200px;
 	background-image: url("../pic/bg_dobbel.jpg");
 	background-repeat: no-repeat;
-	background-position: center;
+	margin: 0 auto;
 	bottom: 0;
 	position: absolute;
 	z-index: -1;
