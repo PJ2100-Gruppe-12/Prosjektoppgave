@@ -86,7 +86,7 @@ function getBooking($id) {
 
 }
 
-function addBooking($roomId,$choise,$dato,$userid) {
+function addBooking($roomId,$choise,$dato) {
 	echo $choise;
 	$start = "$dato" . " "  . $choise; 
 	//$arrayName = array($dato," ",$choise );
@@ -98,9 +98,10 @@ function addBooking($roomId,$choise,$dato,$userid) {
 	for ($i=0; $i < count($start); $i++) { 
 		print_r($start[$i]);
 	}
-	
-	$query = "INSERT INTO `bookings`(`userid`,`roomId`, `start`,`stop`) VALUES ('$userid','$roomId','$start','$stop')";
+	$ul = $_SESSION ['ul'];
+	$query = "INSERT INTO `bookings`(`userid`,`roomId`, `start`,`stop`) VALUES ('$ul','$roomId','$start','$stop')";
 	$result = mysql_query($query);
+
 
 
 
