@@ -11,10 +11,7 @@
 	if(!$result) {
 		echo "die"; 
 	}
-	//navngir alle enkelte elementene fra mysql
-	$id = $array['id'];
-	$userId = $array['userId'];
-	$roomId = $array['roomId'];
+	//navngir start og stopp fra mysql
 	$start = $array['start'];
 	$stop = $array['stop'];
 	//bare for å se start og stopp på enkelte rom
@@ -25,6 +22,8 @@
 	$stringToDate = date('Y-m-d H:i:s', strtotime($date));
 	$timestamp = strtotime('Y-m-d H:i:s'. $date);
 	//sjekker om rommet er ledig akuratt nå.
+	$dato = date('Y-m-d');
+	echo $dato;
 	if($start<= $stringToDate && $stop>=$stringToDate){
 		echo '<div id = "ikkeLedig">ikke ledig til: ' .$stop. '</div>';
 	}
@@ -33,30 +32,35 @@
 	}
 
 	//TODO lage en selector til hvilken tid man skal bruke og submitter informasjonen til databasen.
-	$selectTid = '
-	<form>
-	<select name="choise">
-		<option value="10">10:00</option>
-		<option value="11">11:00</option>
-		<option value="12">12:00</option>
-		<option value="13">13:00</option>
-		<option value="14">14:00</option>
-		<option value="15">15:00</option>
-		<option value="16">16:00</option>
-		<option value="17">17:00</option>
-		<option value="18">18:00</option>
-		<option value="19">19:00</option>
-		<option $submit value="20" name = "tid">20:00</option>
-	</select>
-	<input id= "submit" type="submit" value="SUBMIT">
-	</form>
-	' 
-
-
+	if (isset($_POST['dropdown'])) {
+		addBooking($urlid,$_POST['dropdown'],$dato);
+	}
+	else{
+		echo "  "."velg en tid";
+	}
+		
 ?>
 	
+	<form name= "choise" method ="post">
+	<select name="dropdown">
+		<option value="10:00:00">10:00</option>
+		<option value="11:00:00">11:00</option>
+		<option value="12:00:00">12:00</option>
+		<option value="13:00:00">13:00</option>
+		<option value="14:00:00">14:00</option>
+		<option value="15:00:00">15:00</option>
+		<option value="16:00:00">16:00</option>
+		<option value="17:00:00">17:00</option>
+		<option value="18:00:00">18:00</option>
+		<option value="19:00:00">19:00</option>
+		<option value="20:00:00">20:00</option>
+	<input name = "submit" id= "submit" type="submit" value="SUBMIT">
+	</select>
+	
+	</form>
+
+	 
 <?php
-echo $selectTid	;
 ?>
 	
 </body>

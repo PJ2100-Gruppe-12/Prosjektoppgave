@@ -10,11 +10,11 @@ mysql_select_db("bookingSide");
 function login($username, $password) {
 	//query til databasen som henter henter ut bruker og sjekker om passordet er tilhørende den linjen
 	$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-
 	$result = mysql_query($query);
 	//henter array fra queryen 
 	$rows = mysql_fetch_assoc($result);
 	//hvis dette stemmer så starter man session, og sender deg til booking.php
+	$userid = $rows['id'];
 	if (!empty($rows)) {
 		$_SESSION['ul'] = $rows['id'];
 		header("Location: booking.php?floor=1");
@@ -22,6 +22,7 @@ function login($username, $password) {
 	else {
 		echo "Failure!";
 	}
+	return $userid;
 }
 //legger til en funksjon som bryter av session (ikke tilkoblet en database.)
 function logout() {
@@ -85,7 +86,22 @@ function getBooking($id) {
 
 }
 
-function addBooking() {
+function addBooking($roomId,$choise,$dato,$userid) {
+	echo $choise;
+	$start = "$dato" . " "  . $choise; 
+	//$arrayName = array($dato," ",$choise );
+	$timestamp = strtotime($start);
+	$stop = date('Y-m-d H:i:s', strtotime("$start + 1 hours"));
+	echo $stop;
+
+
+	for ($i=0; $i < count($start); $i++) { 
+		print_r($start[$i]);
+	}
+	
+	$query = "INSERT INTO `bookings`(`userid`,`roomId`, `start`,`stop`) VALUES ('$userid','$roomId','$start','$stop')";
+	$result = mysql_query($query);
+
 
 
 }
