@@ -30,7 +30,7 @@ if (!empty($_POST)) {
 				<input id= "submit" type="submit" value="Logg inn">
 			</form>	
 		</div>
-	
+
 	</body>
 	</html>
 <?php

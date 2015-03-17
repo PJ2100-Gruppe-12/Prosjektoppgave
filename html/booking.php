@@ -26,7 +26,7 @@ $rooms = getBooking("0");
 			//Viser rom som er på etasje 1 TODO : endre floor id til en dynamisk link. 
 			if ($rooms[$i]['floor']==$userfloor) {
 			//Lager en separat link for hver id ($rooms[i]['id'])
-			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "box" id = "rom'. $rooms[$i]['id'] 
+			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'&choise=."><div class = "box" id = "rom'. $rooms[$i]['id'] 
 			.'" >'.$rooms[$i]['name'].'</div></a>';	
 			}
 

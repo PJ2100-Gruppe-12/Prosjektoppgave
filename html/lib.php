@@ -17,7 +17,7 @@ function login($username, $password) {
 	//hvis dette stemmer så starter man session, og sender deg til booking.php
 	if (!empty($rows)) {
 		$_SESSION['ul'] = $rows['id'];
-		header("Location: booking.php");
+		header("Location: booking.php?floor=1");
 	}
 	else {
 		echo "Failure!";
