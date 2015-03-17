@@ -8,6 +8,7 @@ if (isset($_SESSION['ul']) && !empty($_SESSION['ul'])) {
 if (!empty($_POST)) {
 	login($_POST['un'], $_POST['pw']);
 }
+
 ?>
 	
 		
@@ -29,7 +30,8 @@ if (!empty($_POST)) {
 				<input id= "submit" type="submit" value="Logg inn">
 			</form>	
 		</div>
+
 	</body>
 	</html>
-	<?php 
-	?>
+<?php
+?>
