@@ -104,9 +104,9 @@
 }
 
 .box{
-	height: 100px;
-	width: 100px;
-	margin: 5px;
+	height: 120px;
+	width: 120px;
+	margin: 10px;
 	border: solid black 1px;
 	text-align: center;
 	background-color: gray;
@@ -116,9 +116,9 @@
 	background-position: bottom;
 }
 .bigBox{
-	height: 100px;
-	width: 100px;
-	margin: 5px;
+	height: 120px;
+	width: 120px;
+	margin: 10px;
 	border: solid black 1px;
 	text-align: center;
 	background-color: gray;
@@ -130,9 +130,9 @@
 	
 }
 .smallBox{
-	height: 100px;
-	width: 100px;
-	margin: 5px;
+	height: 120px;
+	width: 120px;
+	margin: 10px;
 	border: solid black 1px;
 	text-align: center;
 	background-color: gray;
@@ -174,7 +174,7 @@ a.rom-link {
 /**Her er alle rommene. vi må finne en løsning som gjør at det blir seende likt ut på alle etasjer.**/
 
 .rom-link{
-	margin-left:10px;
+	margin-left:30px;
 	float: left;
 	 margin-top: 20%;
 }
