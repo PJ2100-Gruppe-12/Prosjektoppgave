@@ -12,7 +12,7 @@ if (!empty($_POST)) {
 
 ?>
 	
-		
+		<h1>Rombooking CK32</h1><br>
 		<div id = "loginBackground">
 			<div id = "loginText">Her logger du inn din bruker til vårt bookingsystem</div>
 			<br/>

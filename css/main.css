@@ -15,7 +15,6 @@ height: 25%;
 	height: 260px;
 	margin:0 auto;
 }
-
 #loginBackground{
 	height: auto;
 	width: 500px;
@@ -53,10 +52,19 @@ height: 25%;
 	text-indent: 20px;
 	text-align: center;
 }
-#register {
-	bottom: 0;
-	right: 0;
-	position: absolute;
+#register{
+    position: relative;
+    width: 90px;
+    top: 10px;
+    margin: 0 auto;
+    font-family: helvetica;
+    font-size: 22px;
+    background-color: #f36f65;
+    z-index: 3;
+}
+#register:hover{
+    background-color: #61afca;
+	-webkit-transition: background-color 1s;
 }
 #bgMap{
 	height: 500px;
@@ -73,14 +81,11 @@ height: 25%;
 	font-size: 28px;
 	font-family: helvetica;
 	position: relative;
-
 }
-
 #submit:hover{
 	background-color: #61afca;
 	-webkit-transition: background-color 1s;
 }
-
 .box{
 	height: 120px;
 	width: 120px;
@@ -104,8 +109,6 @@ height: 25%;
 	background-size: contain;
 	background-position: bottom;
 	background-repeat: no-repeat;
-
-	
 }
 .smallBox{
 	height: 120px;
