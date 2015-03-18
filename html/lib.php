@@ -90,19 +90,12 @@ function addBooking($roomId,$tid,$date) {
 	
 	$start = "$date" . " "  . $tid;
 	$stop = date('Y-m-d H:i:s', strtotime("$start + 1 hours"));
-
 	$ul = $_SESSION ['ul'];
-
-
-	//for ($i=0; $i < count($start); $i++) { 
-	//	print_r($start[$i]);
-	//}
-	
 	
 	$checkQuery = "SELECT * FROM `bookings` WHERE roomId = '$roomId' AND start = '$start'";
 	$doQuery = mysql_query($checkQuery);
 	
-
+	
 
 	if(mysql_num_rows($doQuery) == 0){
 		
@@ -114,6 +107,8 @@ function addBooking($roomId,$tid,$date) {
 	else{
 		echo "denne dagen er allerede booket";
 	}
+
+
 
 
 

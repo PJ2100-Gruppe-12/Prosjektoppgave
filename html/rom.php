@@ -16,17 +16,21 @@
 	//navngir start og stopp fra mysql
 	$start = $array['start'];
 	$stop = $array['stop'];
-	//sjekker om rommet er ledig akuratt nå.
+	$now = date("y-m-d h:i:s");
 	
-	
-	
-
-	if($start<= $start && $stop>=$start){
+	//TODO sjekke om rommet er ledig på spesifikke tiden. denne lager boxer til alle tidene i løpet av en dag.
+	for ($i=10; $i < 23; $i++) {
+		if($start<= $now && $now>=$stop){
 		echo '<div id = "ikkeLedig">ikke ledig til: ' .$stop. '</div>';
 	}
 	else{
 		echo '<div class = "ledig">ledig</div>';
 	}
+		
+	}
+	
+
+	
 
 	//TODO lage en selector til hvilken tid man skal bruke og submitter informasjonen til databasen.
 	if (isset($_POST['time'])) {
@@ -39,7 +43,7 @@
 		
 ?>
 	
-	<form name= "choise" method ="post">
+	<form class = "form1" name= "choise" method ="post">
 		<input type="date" name="date">
 		<select name="time">
 		<option value="10:00:00">10:00</option>
@@ -53,10 +57,12 @@
 		<option value="18:00:00">18:00</option>
 		<option value="19:00:00">19:00</option>
 		<option value="20:00:00">20:00</option>
+
 	<input name = "submit" id= "submit" type="submit" value="SUBMIT">
 	</select>
 	
 	</form>
+
 
 	 
 <?php

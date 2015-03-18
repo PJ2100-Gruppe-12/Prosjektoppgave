@@ -121,15 +121,21 @@ a.rom-link {
 }
 
 .ledig{
-	height: 100px;
-	width: 100px;
+	height: 50px;
+	width: 50px;
 	background-color: green;
+	float: left;
+	margin-left: 10px;
+	margin-top: 40%;
 
 }
 #ikkeledig{
-	height: 100px;
-	width: 100px;
+	height: 50px;
+	width: 50px;
 	background-color: red;	
+	float: left;
+	margin-left: 10px;
+	margin-top: 40%;
 }
 #wrapper{
 	height: auto;
@@ -143,4 +149,11 @@ a.rom-link {
 	margin-left: 25px;
 	float: left;
 	 margin-top: 20%;
+}
+
+.form1{
+	height: auto;
+	width: auto;
+	margin-top: 20%;
+	
 }
