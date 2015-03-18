@@ -73,40 +73,38 @@ function getBooking($id) {
 		// henter alle bookinger
 		$r = mysql_query("SELECT * FROM bookings");
 
-	
+
 		// returnerer det modifiserte rom-arrayet
-?>
-<div class = "links">
-<?php		
+		?>
+		<div class = "links">
+			<?php		
 
-		$userfloor=$_GET['floor'];
-		
-		$spots = $row['spots'];
+			$userfloor=$_GET['floor'];
+			$spots = $row['spots'];
+			
 
-		echo $spots;
-		
 
-		echo '<div class = "links">';
-		for ($i=0; $i < count($rooms); $i++) { 
-			if ($rooms[$i]['floor']==$userfloor) {
+			echo '<div class = "links">';
+			for ($i=0; $i < count($rooms); $i++) { 
+				if ($rooms[$i]['floor']==$userfloor) {
 			//Lager en separat link for hver id ($rooms[i]['id'] etter hvor mange spots)
-			if($rooms[$i]['spots']==3){
-			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "box" >'.$rooms[$i]['name'].'</div></a>';		
-			}
-			if ($rooms[$i]['spots']==4) {
-			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "bigBox" >'.$rooms[$i]['name'].'</div></a>';		
-			}
-			if($rooms[$i]['spots'] ==2){
-			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "smallBox" >'.$rooms[$i]['name'].'</div></a>';		
-				
+					if($rooms[$i]['spots']==3){
+						echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "box" >'.$rooms[$i]['name'].'</div></a>';		
+					}
+					if ($rooms[$i]['spots']==4) {
+						echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "bigBox" >'.$rooms[$i]['name'].'</div></a>';		
+					}
+					if($rooms[$i]['spots'] ==2){
+						echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "smallBox" >'.$rooms[$i]['name'].'</div></a>';		
+
+					}
+
+				}
 			}
 
-			}
-		}
-				
-?>
-</div>
-<?php
+			?>
+		</div>
+		<?php
 
 
 		
