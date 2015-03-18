@@ -1,26 +1,31 @@
 @charset "utf-8" ;
-#bg {
-	margin:0 auto ;
+body{
+    margin: 0 auto;
+}
+h1{
+    margin: 0 auto;
+    text-align: center;
+}
+#bg{
 	bottom: 0;
-	z-index: -2;
+	left: 0;
 	position: absolute;
-	rezise: none;
+	z-index: -1;
 }
-#bgd{
-	width: 100%;
-	height: 25%;
-}
-#logo {
+#logo{
 	width: 234px;
 	height: 260px;
-	margin:0 auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 26px;
+    font-family: helvetica;
 }
 #loginBackground{
 	height: auto;
 	width: 500px;
-	position: absolute;
-	left: 33%;
-	top: 30%;
+    margin: 0 auto;
 	border: solid black 1px;
 	background-color: white;
 }
@@ -28,7 +33,7 @@
 	font-size: 20px;
 	color: black;
 	top: 10px;
-	position:absolute;
+    margin: 0 auto;
 	left: 10px;
 	width: 500px;
 	text-align: center;
@@ -74,6 +79,16 @@
 	top: 35%;
 	left: 15%;
 }
+.rom{
+	height: 100px;
+	width: 100px;
+	background-color: red;
+    margin: 0 auto;
+}
+.rom:hover{
+	transition: background 0.2;
+    background-color: red;
+}
 #submit{
 	background-color: #f36f65;
 	width: 120px;
@@ -87,149 +102,108 @@
 	-webkit-transition: background-color 1s;
 }
 .box{
-	height: 120px;
-	width: 120px;
-	margin: 10px;
-	border: solid black 1px;
-	text-align: center;
-	background-color: gray;
-	background-image: url("../pic/personer-3pers-1pers-hvit.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: bottom;
+    float: left;
+    margin: 10px;
+	border: ridge gray 5px;
+    font-size: 20px;
+	text-align: center; 
+    font-family: helvetica;
+    color: black;
+    background-color: #c4b4b4;
 }
-.bigBox{
-	height: 120px;
-	width: 120px;
-	margin: 10px;
-	border: solid black 1px;
-	text-align: center;
-	background-color: gray;
-	background-image: url("../pic/4pers-prosjektor.png");
-	background-size: contain;
-	background-position: bottom;
-	background-repeat: no-repeat;
+#box{
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 1100px;
+    position: relative;
 }
-.smallBox{
-	height: 120px;
-	width: 120px;
-	margin: 10px;
-	border: solid black 1px;
-	text-align: center;
-	background-color: gray;
-	background-image: url("../pic/personer-2pers-2pers-hvit.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: bottom;
+#rom1:hover, #rom2:hover, #rom3:hover, #rom4:hover, #rom5:hover, #rom6:hover{
+    background-image: url(../pic/prosjektor3.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#rom7:hover, #rom8:hover, #rom9:hover, #rom10:hover, #rom11:hover, #rom12:hover{
+    background-image: url(../pic/2pers.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#rom1, #rom2, #rom3, #rom4, #rom5, #rom6{
+    height: 150px;
+	width: 150px;
+}
+#rom7, #rom8, #rom9, #rom10, #rom11, #rom12{
+    height: 100px;
+    width: 100px;
+    margin-left: 45px;
 }
 a.rom-link {
-	display: block;
 	width: 100px;
-	text-decoration: none;
-	color: white;
 }
 .ledig{
-	height: 50px;
-	width: 50px;
+	height: 100px;
+	width: 100px;
 	background-color: green;
-	float: left;
-	margin-left: 10px;
-	margin-top: 40%;
 }
 #ikkeledig{
-	height: 50px;
-	width: 50px;
+	height: 100px;
+	width: 100px;
 	background-color: red;	
-	float: left;
-	margin-left: 10px;
-	margin-top: 40%;
 }
 #wrapper{
-	margin:0 auto;
-
-}
-.rom-link{
-	margin-left:40px;
-	float: left;
-	
-}
-.form1{
 	height: auto;
-	width: auto;
-	margin-top: 20%;
+	width: 100%;
+	z-index: 10;
 }
 nav{
-	text-align: center;
-	font-family: helvetica;
-	font-weight: bold;
-
+    text-align: center;
+    font-family: helvetica;
+    font-weight: bold;
 }
 .link{
-	transition: 0.3s;
-	color: black;
-	font-size: 26px;
-	padding: 8px;
-	margin: 8px;
-	text-decoration: none;
+    transition: 0.3s;
+    color: black;
+    font-size: 26px;
+    padding: 8px;
+    margin: 8px;
+    text-decoration: none;
 }
 .link:hover{
-	background-color: Black;
-	color: white;
-	padding: 10px 20px;
+    background-color: Black;
+    color: white;
+    padding: 10px 20px;
 }
 p{
-	font-size: 24px;
-	color: orange;
-	text-align: center;
-	font-family: helvetica
+    font-size: 24px;
+    color: orange;
+    text-align: center;
+    font-family: helvetica
 }
 #floor{
-	padding: 10px;
-	margin: 0 auto;
-	height: 60px;
-	width: 250px;
-	font-size: 20px;
-	text-align: center;
-	font-family: helvetica;
-	margin: 0 auto;
-	color: black;
-	text-decoration: none;
-	font-weight: bold;
+    padding: 10px;
+    margin: 0 auto;
+    height: 60px;
+    width: 250px;
+    font-size: 20px;
+    text-align: center;
+    font-family: helvetica;
+    margin: 0 auto;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
 .floorbox{
-	color: black;
-	font-weight: bold;
-	font-family: helvetica;
+    color: black;
+    font-weight: bold;
+    font-family: helvetica;
 }
 .floorbox:hover{
-	transition: 0.3s;    
-	background-color: Black;
-	color: white;
-	padding: 5px 10px;
+    transition: 0.3s;    
+    background-color: Black;
+    color: white;
+    padding: 5px 10px;
 }
 a{
-	text-decoration: none;
-	color: black;
-}
-.links{
-	width: 900px;
-	height: 400;
-	margin: 0 auto;
-}
-
-.valg{
-	border:2px solid black;
-	height: 100px;
-	width: 100px;
-	float: left;
-	margin-left: 5px;
-
-}
-.romvalg{
-	height: 100px;
-	width: 100px;
-	float: left;
-	margin-left: 5px;
-	border:2px solid black;
-
+    text-decoration: none;
+    color: black;
 }
