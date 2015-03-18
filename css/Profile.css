@@ -21,33 +21,9 @@ h1{
     background-repeat: no-repeat;
     background-image: url(../Assets/Bilder/logo.png);
 }
-nav {
-  margin-top: 40px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0);
-}
-#nav {
-  background: Purple;
-}
 #wrap{
     height: 600px;
     width: 960px;
     margin: 0 auto;
     font-size: 24px;
-}
-
-
-.link {
-  transition: 0.5s;
-  color: orange;
-  font-size: 26px;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-}
-.link:hover {
-  background-color: Black;
-  color: #EEA200;
-  padding: 20px 10px;
 }

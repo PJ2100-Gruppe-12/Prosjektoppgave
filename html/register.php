@@ -18,6 +18,10 @@ if (!empty($_POST)) {
 		<!-- BODY -->
 		<div id = "bg"></div>
 		<div id = "logo"><img src="../pic/logo.png"></div>
+        <nav>
+            <a class="link" href="login.php" alt="#">Tillbake</a>
+        </nav>
+        <br>
 		<div id = "loginBackground">
 			<div id = "loginText">Her registrerer du din bruker</div>
 		</br></br>
