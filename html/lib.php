@@ -4,8 +4,8 @@
 
 // Lib containing all db methods
 
-mysql_connect("localhost", "sigrtipf_pj2100", "BatRob2246");
-mysql_select_db("sigrtipf_pj2100");
+mysql_connect("localhost", "root", "");
+mysql_select_db("bookingSide");
 
 function login($username, $password) {
 	//query til databasen som henter henter ut bruker og sjekker om passordet er tilhørende den linjen
