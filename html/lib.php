@@ -73,13 +73,38 @@ function getBooking($id) {
 		// henter alle bookinger
 		$r = mysql_query("SELECT * FROM bookings");
 
-		// setter inn variablen 'free' i rommene, så vi kan bruke det til å vise frem om rom er ledig eller ikke
-		while ($row = mysql_fetch_assoc($r)){
-			$rooms[$row['roomId']]['free'] = true; // TODO: sjekk om den er ledig (er valgt tid mellom bookingens start og end ($row['start'] etc) )
+	
+		// returnerer det modifiserte rom-arrayet
+		for ($i=1; $i < 7; $i++) { 
+			echo '<a href = "booking.php?floor='.$i.'">'.$i.'</a>';
 		}
 		
-		// returnerer det modifiserte rom-arrayet
-		return $rooms;
+		$userfloor=$_GET['floor'];
+		
+		$spots = $row['spots'];
+
+		echo $spots;
+		
+
+		echo '<div class = "links">';
+		for ($i=0; $i < count($rooms); $i++) { 
+			if ($rooms[$i]['floor']==$userfloor) {
+			//Lager en separat link for hver id ($rooms[i]['id'])
+			if($rooms[$i]['spots']==3){
+			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "box" >'.$rooms[$i]['name'].'</div></a>';		
+			}
+			if ($rooms[$i]['spots']==4) {
+			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "bigBox" >'.$rooms[$i]['name'].'</div></a>';		
+			}
+			if($rooms[$i]['spots'] ==2){
+			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "smallBox" >'.$rooms[$i]['name'].'</div></a>';		
+				
+			}
+
+			}
+
+		}
+		echo '</div>';
 
 
 	}

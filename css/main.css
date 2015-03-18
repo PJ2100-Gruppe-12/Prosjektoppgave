@@ -108,11 +108,35 @@
 	width: 100px;
 	margin: 5px;
 	border: solid black 1px;
-	text-align: center; 
+	text-align: center;
+	background-color: gray;
+	background-image: url("../pic/personer-3pers-1pers-hvit.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.bigBox{
+	height: 100px;
+	width: 100px;
+	margin: 5px;
+	border: solid black 1px;
+	text-align: center;
+	background-color: gray;
+
 	
+
 	
 }
-
+.smallBox{
+	height: 100px;
+	width: 100px;
+	margin: 5px;
+	border: solid black 1px;
+	text-align: center;
+	background-color: gray;
+	background-image: url("../pic/personer-2pers-2pers-hvit.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 a.rom-link {
 	display: block;
 	width: 100px;
@@ -150,6 +174,8 @@ a.rom-link {
 	float: left;
 	 margin-top: 20%;
 }
+
+
 
 .form1{
 	height: auto;
