@@ -174,7 +174,7 @@ a.rom-link {
 /**Her er alle rommene. vi må finne en løsning som gjør at det blir seende likt ut på alle etasjer.**/
 
 .rom-link{
-	margin-left: 25px;
+	margin-left:10px;
 	float: left;
 	 margin-top: 20%;
 }
@@ -187,3 +187,4 @@ a.rom-link {
 	margin-top: 20%;
 	
 }
+.links{}
