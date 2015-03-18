@@ -1,54 +1,54 @@
 <?php
-include 'lib.php';
-include 'header.php';
-include'nav.php';
+	include 'lib.php';
+	include 'header.php';
+	include'nav.php';
 	//if (!empty($_POST)) {
 	//	addBooking(userID['un'], $_POST['pw'], $_POST['cpw'], $_POST['sn'], $_POST['pn'],$_POST['tlf'], $_POST['email']);
 	//}
 
 
 
-$urlid = $_GET['id'];
-$result = mysql_query("SELECT * FROM bookings where roomId ='$urlid'") or die(mysql_error());
-$array = mysql_fetch_assoc($result);
+	$urlid = $_GET['id'];
+	$result = mysql_query("SELECT * FROM bookings where roomId ='$urlid'") or die(mysql_error());
+	$array = mysql_fetch_assoc($result);
 	//print_r($array);
-
-if(!$result) {
-	echo "die"; 
-}
+	
+	if(!$result) {
+		echo "die"; 
+	}
 	//navngir start og stopp fra mysql
-$start = $array['start'];
-$stop = $array['stop'];
-$now = date("y-m-d h:i:s");
-$timestamp = strtotime($now);
-
+	$start = $array['start'];
+	$stop = $array['stop'];
+	$now = date("y-m-d h:i:s");
+	$timestamp = strtotime($now);
+	
 	//TODO sjekke om rommet er ledig på spesifikke tiden. denne lager boxer til alle tidene i løpet av en dag.
+	
+		if($timestamp>strtotime($start) && $timestamp<strtotime($stop)){
+		echo '<div id = "ikkeLedig">ikke ledig til: ' .$stop. '</div>';
+	}
+	else{
+		echo '<div class = "ledig">ledig</div>';
+	}
+		
+	
 
-if($timestamp>strtotime($start) && $timestamp<strtotime($stop)){
-	echo '<div id = "ikkeLedig">ikke ledig til: ' .$stop. '</div>';
-}
-else{
-	echo '<div class = "ledig">ledig</div>';
-}
-
-
-
-
+	
 
 	//TODO lage en selector til hvilken tid man skal bruke og submitter informasjonen til databasen.
-
-if (isset($_POST['time']) && isset($_POST['date'])) {
-	addBooking($_GET['id'],$_POST['time'],$_POST['date']);
-
-}
-else{
-	echo "  "."velg en tid";
-}
-
-
+	
+	if (isset($_POST['time']) && isset($_POST['date'])) {
+		addBooking($_GET['id'],$_POST['time'],$_POST['date']);
+		
+	}
+	else{
+		echo "  "."velg en tid";
+	}
+	
+		
 ?>
-
-	<!-- <form class = "form1" name= "choise" method ="post">
+ 	
+	<form class = "form1" name= "choise" method ="post">
 		<input type="date" name="date">
 		<select name="time">
 
@@ -68,34 +68,29 @@ else{
 	</select>
 	
 	</form>
--->
 
-
+ 
+	 
 <?php
 ?>
 
-
+	
 </body>
 </html>
 
 
 
 <?php
-echo '<form class = "form1" name= "choise" method ="post">
-<input type="date" name="date">
-<select name="time">';
-for ($i=0; $i < 10; $i++) { 
+// echo '<form class = "form1" name= "choise" method ="post">
+// 		<input type="date" name="date">
+// 		<select name="time">';
+// for ($i=0; $i < 10; $i++) { 
+// 	echo '<option value = "1"'.$i.':00:00>'."1".$i.'</option>';
+
+
+// }
+// echo '<input name = "submit" id= "submit" type="submit" value="SUBMIT">
+// 	</select>
 	
-	echo '<option value = "1"'.$i.':00:00>'."1".$i.'</option>';
-
-}
-echo '<input name = "submit" id= "submit" type="submit" value="SUBMIT">
-</select>
-
-</form>';
-
-$sql = ("SELECT * FROM 'bookings'");
-$re = mysql_query($sql);
-$sqlArray = mysql_fetch_array($re);
-print_r($sqlArray);	
+// 	</form>';
 ?>
