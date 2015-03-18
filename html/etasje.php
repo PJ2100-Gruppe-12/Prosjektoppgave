@@ -1,4 +1,8 @@
- <!DOCTYPE html>
+<?php
+
+?>
+
+    <DOCTYPE html>
         <html>
         <head>
             <!-- HEAD -->
@@ -22,4 +26,4 @@
 
         </body>
 
-        </html>
+        </html><?php

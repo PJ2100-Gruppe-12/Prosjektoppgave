@@ -12,7 +12,15 @@ h1{
 	position: absolute;
 	z-index: -1;
 }
+<<<<<<< HEAD
 #logo{
+=======
+#bgd{
+width: 100%;
+height: 25%;
+}
+#logo {
+>>>>>>> origin/master
 	width: 234px;
 	height: 260px;
     margin: 0 auto;
@@ -151,6 +159,18 @@ a.rom-link {
 	background-color: red;	
 }
 #wrapper{
+<<<<<<< HEAD
+=======
+	margin:0 auto;
+
+}
+.rom-link{
+	margin-left:40px;
+	float: left;
+	 
+}
+.form1{
+>>>>>>> origin/master
 	height: auto;
 	width: 100%;
 	z-index: 10;
@@ -159,6 +179,10 @@ nav{
     text-align: center;
     font-family: helvetica;
     font-weight: bold;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 .link{
     transition: 0.3s;
@@ -206,4 +230,13 @@ p{
 a{
     text-decoration: none;
     color: black;
+<<<<<<< HEAD
 }
+=======
+}
+.links{
+	width: 900px;
+	height: 400;
+	margin: 0 auto;
+}
+>>>>>>> origin/master
