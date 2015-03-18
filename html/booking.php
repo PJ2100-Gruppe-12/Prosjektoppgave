@@ -21,7 +21,7 @@ $rooms = getBooking("0");
 		
 		$userfloor=$_GET['floor'];
 
-		
+		echo '<div class = "links">';
 		for ($i=0; $i < count($rooms); $i++) { 
 			if ($rooms[$i]['floor']==$userfloor) {
 			//Lager en separat link for hver id ($rooms[i]['id'])
@@ -30,6 +30,7 @@ $rooms = getBooking("0");
 			}
 
 		}
+		echo '</div>';
 		
 
 ?>

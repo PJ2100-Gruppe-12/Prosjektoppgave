@@ -3,7 +3,7 @@
 include 'lib.php';
 include 'header.php';
 if (isset($_SESSION['ul']) && !empty($_SESSION['ul'])) {
-	header("Location: booking.php");
+	header("Location: booking.php?floor=1");
 }
 if (!empty($_POST)) {
 	login($_POST['un'], $_POST['pw']);

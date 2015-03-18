@@ -86,21 +86,34 @@ function getBooking($id) {
 
 }
 
-function addBooking($roomId,$choise,$dato) {
-	echo $choise;
-	$start = "$dato" . " "  . $choise; 
-	//$arrayName = array($dato," ",$choise );
-	$timestamp = strtotime($start);
+function addBooking($roomId,$tid,$date) {
+	
+	$start = "$date" . " "  . $tid;
 	$stop = date('Y-m-d H:i:s', strtotime("$start + 1 hours"));
-	echo $stop;
 
-
-	for ($i=0; $i < count($start); $i++) { 
-		print_r($start[$i]);
-	}
 	$ul = $_SESSION ['ul'];
-	$query = "INSERT INTO `bookings`(`userid`,`roomId`, `start`,`stop`) VALUES ('$ul','$roomId','$start','$stop')";
-	$result = mysql_query($query);
+
+
+	//for ($i=0; $i < count($start); $i++) { 
+	//	print_r($start[$i]);
+	//}
+	
+	
+	$checkQuery = "SELECT * FROM `bookings` WHERE roomId = '$roomId' AND start = '$start'";
+	$doQuery = mysql_query($checkQuery);
+	
+
+
+	if(mysql_num_rows($doQuery) == 0){
+		
+		$query = "INSERT INTO `bookings`(`userid`,`roomId`, `start`,`stop`) VALUES ('$ul','$roomId','$start','$stop')";
+		$result = mysql_query($query);
+		echo "LAGT TIL EN BOOKING: ". $start. " TIL : ". $stop;
+		
+	}
+	else{
+		echo "denne dagen er allerede booket";
+	}
 
 
 

@@ -16,17 +16,12 @@
 	//navngir start og stopp fra mysql
 	$start = $array['start'];
 	$stop = $array['stop'];
-	//bare for å se start og stopp på enkelte rom
-	echo $start. " " . $stop;
-	//current date + format. 	
-	$date = date('Y-m-d H:i:s');
-	//gjør om date() til riktig format
-	$stringToDate = date('Y-m-d H:i:s', strtotime($date));
-	$timestamp = strtotime('Y-m-d H:i:s'. $date);
 	//sjekker om rommet er ledig akuratt nå.
-	$dato = date('Y-m-d');
-	echo $dato;
-	if($start<= $stringToDate && $stop>=$stringToDate){
+	
+	
+	
+
+	if($start<= $start && $stop>=$start){
 		echo '<div id = "ikkeLedig">ikke ledig til: ' .$stop. '</div>';
 	}
 	else{
@@ -34,17 +29,19 @@
 	}
 
 	//TODO lage en selector til hvilken tid man skal bruke og submitter informasjonen til databasen.
-	if (isset($_POST['dropdown'])) {
-		addBooking($urlid,$_POST['dropdown'],$dato);
+	if (isset($_POST['time'])) {
+		addBooking($_GET['id'],$_POST['time'],$_POST['date']);
 	}
 	else{
 		echo "  "."velg en tid";
 	}
+	
 		
 ?>
 	
 	<form name= "choise" method ="post">
-	<select name="dropdown">
+		<input type="date" name="date">
+		<select name="time">
 		<option value="10:00:00">10:00</option>
 		<option value="11:00:00">11:00</option>
 		<option value="12:00:00">12:00</option>
