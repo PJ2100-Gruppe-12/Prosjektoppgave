@@ -10,9 +10,6 @@
 	$urlid = $_GET['id'];
 	$result = mysql_query("SELECT * FROM bookings where roomId ='$urlid'") or die(mysql_error());
 	$array = mysql_fetch_assoc($result);
-	//for ($i=0; $i <6 ; $i++) { 
-	//	print_r($array[$i]);
-	//		}
 	//print_r($array);
 	
 	if(!$result) {
@@ -49,10 +46,11 @@
 	
 		
 ?>
-	
+ 	
 	<form class = "form1" name= "choise" method ="post">
 		<input type="date" name="date">
 		<select name="time">
+
 		<option value="10:00:00">10:00</option>
 		<option value="11:00:00">11:00</option>
 		<option value="12:00:00">12:00</option>
@@ -70,7 +68,7 @@
 	
 	</form>
 
-
+ 
 	 
 <?php
 ?>
@@ -78,3 +76,20 @@
 	
 </body>
 </html>
+
+
+
+<?php
+// echo '<form class = "form1" name= "choise" method ="post">
+// 		<input type="date" name="date">
+// 		<select name="time">';
+// for ($i=0; $i < 10; $i++) { 
+// 	echo '<option value = "1"'.$i.':00:00>'."1".$i.'</option>';
+
+
+// }
+// echo '<input name = "submit" id= "submit" type="submit" value="SUBMIT">
+// 	</select>
+	
+// 	</form>';
+?>
