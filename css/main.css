@@ -113,6 +113,7 @@
 	background-image: url("../pic/personer-3pers-1pers-hvit.png");
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: bottom;
 }
 .bigBox{
 	height: 100px;
@@ -121,8 +122,10 @@
 	border: solid black 1px;
 	text-align: center;
 	background-color: gray;
-
-	
+	background-image: url("../pic/4pers-prosjektor.png");
+	background-size: contain;
+	background-position: bottom;
+	background-repeat: no-repeat;
 
 	
 }
@@ -136,6 +139,7 @@
 	background-image: url("../pic/personer-2pers-2pers-hvit.png");
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-position: bottom;
 }
 a.rom-link {
 	display: block;
