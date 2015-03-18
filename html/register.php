@@ -9,7 +9,7 @@ if (!empty($_POST)) {
 	<html>
 	<head>
 		<!-- HEAD -->
-		<title>BookingSide</title>
+		<title>Bookingside</title>
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 		<meta charset="utf-8">
 	</head>
@@ -19,7 +19,7 @@ if (!empty($_POST)) {
 		<div id = "bg"></div>
 		<div id = "logo"><img src="../pic/logo.png"></div>
         <nav>
-            <a class="link" href="login.php" alt="#">Tillbake</a>
+            <a class="link" href="login.php" alt="#">Tilbake</a>
         </nav>
         <br>
 		<div id = "loginBackground">
