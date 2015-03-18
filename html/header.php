@@ -6,6 +6,7 @@ if ((!isset($_SESSION['ul']) || empty($_SESSION['ul'])) && empty($_GET['ul'])) {
 if (isset($_GET['lo']) && $_GET['lo'] == "true") {
 	logout();
 }
+
 ?>
 
 <DOCTYPE html>

@@ -89,7 +89,7 @@ function getBooking($id) {
 		echo '<div class = "links">';
 		for ($i=0; $i < count($rooms); $i++) { 
 			if ($rooms[$i]['floor']==$userfloor) {
-			//Lager en separat link for hver id ($rooms[i]['id'])
+			//Lager en separat link for hver id ($rooms[i]['id'] etter hvor mange spots)
 			if($rooms[$i]['spots']==3){
 			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "box" >'.$rooms[$i]['name'].'</div></a>';		
 			}

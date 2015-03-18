@@ -10,6 +10,11 @@
 	$urlid = $_GET['id'];
 	$result = mysql_query("SELECT * FROM bookings where roomId ='$urlid'") or die(mysql_error());
 	$array = mysql_fetch_assoc($result);
+	//for ($i=0; $i <6 ; $i++) { 
+	//	print_r($array[$i]);
+	//		}
+	//print_r($array);
+	
 	if(!$result) {
 		echo "die"; 
 	}
@@ -17,24 +22,26 @@
 	$start = $array['start'];
 	$stop = $array['stop'];
 	$now = date("y-m-d h:i:s");
+	$timestamp = strtotime($now);
 	
 	//TODO sjekke om rommet er ledig på spesifikke tiden. denne lager boxer til alle tidene i løpet av en dag.
-	for ($i=10; $i < 23; $i++) {
-		if($start<= $now && $now>=$stop){
+	
+		if($timestamp>strtotime($start) && $timestamp<strtotime($stop)){
 		echo '<div id = "ikkeLedig">ikke ledig til: ' .$stop. '</div>';
 	}
 	else{
 		echo '<div class = "ledig">ledig</div>';
 	}
 		
-	}
 	
 
 	
 
 	//TODO lage en selector til hvilken tid man skal bruke og submitter informasjonen til databasen.
-	if (isset($_POST['time'])) {
+	
+	if (isset($_POST['time']) && isset($_POST['date'])) {
 		addBooking($_GET['id'],$_POST['time'],$_POST['date']);
+		
 	}
 	else{
 		echo "  "."velg en tid";

@@ -5,9 +5,11 @@
 	background-image: url("../pic/bg_dobbel.png");
 	background-repeat: no-repeat;
 	margin: 0 auto;
-	bottom: 0
-;	position: absolute
-;	z-index: -1;
+	bottom: 0;
+	position: absolute;
+	z-index: -1;
+	background-size: cover;
+
 
 }
 #logo {
@@ -144,6 +146,9 @@
 a.rom-link {
 	display: block;
 	width: 100px;
+	text-decoration: none;
+	color: white;
+
 	
 
 }
