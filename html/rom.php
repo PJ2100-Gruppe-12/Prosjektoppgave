@@ -1,6 +1,7 @@
 <?php
 	include 'lib.php';
 	include 'header.php';
+	include'nav.php';
 	//if (!empty($_POST)) {
 	//	addBooking(userID['un'], $_POST['pw'], $_POST['cpw'], $_POST['sn'], $_POST['pn'],$_POST['tlf'], $_POST['email']);
 	//}

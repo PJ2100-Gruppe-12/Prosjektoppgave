@@ -20,13 +20,13 @@ if (isset($_GET['lo']) && $_GET['lo'] == "true") {
 
 	<body>
 		<!-- BODY -->
+		<div id = "logo"><img src="../pic/logo.png"></div>
+		<div id = "bg"><img id = "bgd"src="../pic/bg_dobbel.png"></div>
 		<div id ="wrapper">
-			<div id = "bg"></div>
-			<div id = "logo"><img src="../pic/logo.png"></div>
-		</div>
+			
+			
+		</div><br>
 <?php
-			if ((isset($_SESSION['ul'])) && !empty($_SESSION['ul'])) {
-			echo '<a href="booking.php?lo=true">Logg ut</a>';
-		}
+
 		
 ?>

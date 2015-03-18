@@ -12,18 +12,12 @@ $rooms = getBooking("0");
 ?>
 
 	
-
 <?php
 
 		
-		
-		
-
 ?>
 
 	
 	
 </body>
 </html>
-<?php
-?>

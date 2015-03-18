@@ -75,10 +75,10 @@ function getBooking($id) {
 
 	
 		// returnerer det modifiserte rom-arrayet
-		for ($i=1; $i < 7; $i++) { 
-			echo '<a href = "booking.php?floor='.$i.'">'.$i.'</a>';
-		}
-		
+?>
+<div class = "links">
+<?php		
+
 		$userfloor=$_GET['floor'];
 		
 		$spots = $row['spots'];
@@ -102,9 +102,14 @@ function getBooking($id) {
 			}
 
 			}
-
 		}
-		echo '</div>';
+				
+?>
+</div>
+<?php
+
+
+		
 
 
 	}
@@ -120,6 +125,7 @@ function addBooking($roomId,$tid,$date) {
 	$checkQuery = "SELECT * FROM `bookings` WHERE roomId = '$roomId' AND start = '$start'";
 	$doQuery = mysql_query($checkQuery);
 	
+
 	
 
 	if(mysql_num_rows($doQuery) == 0){
