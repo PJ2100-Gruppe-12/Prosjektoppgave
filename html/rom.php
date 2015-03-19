@@ -60,7 +60,7 @@
 		<option value="19:00:00">19:00</option>
 		<option value="20:00:00">20:00</option>
 <br><br>
-	<input name = "submit" class ="submit" id= "regtime" type="submit" value="SUBMIT">
+	<input name = "submit" class ="submit" id= "regtime" type="submit" value="Reserver">
 	</select>
 	
 	</form>
