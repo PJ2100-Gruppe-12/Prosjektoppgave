@@ -24,12 +24,7 @@
 	
 	//TODO sjekke om rommet er ledig på spesifikke tiden. denne lager boxer til alle tidene i løpet av en dag.
 	
-		if($timestamp>strtotime($start) && $timestamp<strtotime($stop)){
-		echo '<div id = "ikkeLedig">ikke ledig til: ' .$stop. '</div>';
-	}
-	else{
-		echo '<div class = "ledig">ledig</div>';
-	}
+
 		
 	
 

@@ -20,44 +20,40 @@ if (!empty($_POST)) {
 		<div id = "logo"><img src="../pic/logo.png"></div>
         <nav>
             <a class="link" href="login.php" alt="#">Tillbake</a>
-        </nav>
-        <br>
-		<div id = "loginBackground">
-			<div id = "loginText">Her registrerer du din bruker</div>
-		</br></br>
-			<form id = "login" method="post"><br/>
+        </nav><br>
+		<div id = "loginBackground"></br></br>
+			<form id = "login" method="post"><br>
 
-				Brukernavn:<br/>
+				Brukernavn:<br>
 				<input class ="inputField" type="text" name="un" />
 				<br/>
 
-				Passord :<br/>
+				Passord :<br>
 				<input class = "inputField" type="password" name="pw" />
 				<br/>
 
-				Bekreft passord:<br/>
+				Bekreft passord:<br>
 				<input class = "inputField" type="password" name="cpw" />
 				<br/><br/>
 
 				
 
-				Personnummer:<br/>
+				Personnummer:<br>
 				<input class ="inputField" type="text" name="pn" />
 				<br/>
 
-				Studentnummer:<br/>
+				Studentnummer:<br>
 				<input class ="inputField" type="text" name="sn" />
 				<br/>
 
-				Telefon:<br/>
+				Telefon:<br>
 				<input class ="inputField" type="text" name="tlf" />
 				<br/>
 
-				Email:<br/>
+				Email:<br>
 				<input class ="inputField" type="text" name="email" />
-				<br/>
+				<br/><br>
 				<input id = "submit" type="submit" value="Registrer" />
-
 			</form>	
 		</div>
 	</body>
