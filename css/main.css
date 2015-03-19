@@ -91,7 +91,7 @@ h1{
 	font-family: helvetica;
 	position: relative;
 }
-#submit:hover{
+.submit:hover{
 	background-color: Black;
 	color: white;
 	padding: 10px 20px;
@@ -133,7 +133,8 @@ a.rom-link {
 	display: block;
 	width: 100px;
 	text-decoration: none;
-	color: white;
+	color: black;
+
 }
 .ledig{
 	height: 50px;
@@ -164,6 +165,7 @@ a.rom-link {
 	height: 300px;
 	width: 500px;
 	border: solid 1px black;
+	background-color: white;
 }
 nav{
 	text-align: center;
@@ -217,9 +219,11 @@ a{
 	color: #62afca;
 }
 .links{
-	width: 960px;
-	height: 600px;
+	width: 945px;
+	height: 320px;
 	margin: 0 auto;
+	background-color: white;
+	border: 1px solid black;
 }
 .valg{
 	border:2px solid black;
