@@ -30,12 +30,12 @@ function logout() {
 	header("Location: login.php");
 }
 
-function register($username, $password, $confirmPassword,$sn, $pn, $tlf, $email) {
+function register($username, $password, $confirmPassword,$sn, $tlf, $email) {
 	//denne sjekker om pw stemmer med confirmpw
 	if ($password == $confirmPassword) {
 		//querry til database for å legge til bruker info
-		$query = "INSERT INTO users (username, password, studentnr,pNr,tlf,email) 
-		VALUES ('$username', '$password', '$sn','$pn','$tlf','$email')";
+		$query = "INSERT INTO users (username, password, studentnr,tlf,email) 
+		VALUES ('$username', '$password', '$sn','$tlf','$email')";
 		$result = mysql_query($query);
 
 
