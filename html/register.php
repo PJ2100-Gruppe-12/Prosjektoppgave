@@ -6,7 +6,7 @@ if (!empty($_POST)) {
 ?>
 
 <DOCTYPE html>
-	<html>
+<html>
 	<head>
 		<!-- HEAD -->
 		<title>BookingSide</title>
@@ -16,11 +16,10 @@ if (!empty($_POST)) {
 
 	<body>
 		<!-- BODY -->
-		<div id = "bg"></div>
 		<div id = "logo"><img src="../pic/logo.png"></div>
-        <nav>
-            <a class="link" href="login.php" alt="#">Tillbake</a>
-        </nav><br>
+		<nav>
+			<a class="link" href="login.php" alt="#">Tilbake</a>
+		</nav><br>
 		<div id = "loginBackground"></br></br>
 			<form id = "login" method="post"><br>
 
@@ -51,7 +50,7 @@ if (!empty($_POST)) {
 			</form>	
 		</div>
 	</body>
-	</html>
+</html>
 	
 
 

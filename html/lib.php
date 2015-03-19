@@ -1,19 +1,16 @@
 <?php
-
-
-
-// Lib containing all db methods
+// LIB MED ALLE FUNKSJONENE
 
 mysql_connect("localhost", "root", "");
 mysql_select_db("bookingSide");
 
 function login($username, $password) {
-	//query til databasen som henter henter ut bruker og sjekker om passordet er tilhørende den linjen
+	//QUERY TIL DATABASE SOM HENTER UT BRUKER OG SJEKKER OM PASSORDET STEMMER OVERENS MED BRUKER
 	$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 	$result = mysql_query($query);
 	//henter array fra queryen 
 	$rows = mysql_fetch_assoc($result);
-	//hvis dette stemmer så starter man session, og sender deg til booking.php
+	//HVIS DETTE STEMMER SÅ STARTER MAN SESSION OG SENDER DEG TIL BOOKING.PHP
 	$userid = $rows['id'];
 	if (!empty($rows)) {
 		$_SESSION['ul'] = $rows['id'];
@@ -24,33 +21,32 @@ function login($username, $password) {
 	}
 	return $userid;
 }
-//legger til en funksjon som bryter av session (ikke tilkoblet en database.)
 function logout() {
+	//AVSLUTTER SESSION
 	session_destroy();
 	header("Location: login.php");
 }
 
 function register($username, $password, $confirmPassword,$sn, $tlf, $email) {
-	//denne sjekker om pw stemmer med confirmpw
+	//SJEKKER OM PW = CPW
 	if ($password == $confirmPassword) {
-		//querry til database for å legge til bruker info
+		//QUERRY TIL DATABASE FOR Å LEGGE INN INFORMASJONEN
 		$query = "INSERT INTO users (username, password, studentnr,tlf,email) 
 		VALUES ('$username', '$password', '$sn','$tlf','$email')";
 		$result = mysql_query($query);
 
-
 		echo $result;
-		//hvis result har data success
+		//HVIS RESULT HAR DATA SUCCESS
 		if ($result) {
 			echo "Success!";
 			header("Location: login.php");
 		}
-		//hvis ikke failure
+		//HVIS IKKE FAILURE
 		else {
 			echo "Failure!";
 		}
 	}
-	//slutt på pw if == cpw
+	//HVIS PW IKKE = CPW ECHO ERROR
 	else {
 		echo "Passordene er ikke like...";
 	}
@@ -59,65 +55,56 @@ function register($username, $password, $confirmPassword,$sn, $tlf, $email) {
 function getBooking($id) {
 
 	if ($id == "0") {
-		// henter alle rom
+		//HENTER ALLE ROM
 		$r = mysql_query("SELECT * FROM rooms") or die(mysql_error());
-		//error 
+		//ERRORLOG
 		if(!$r) {
 			echo "die"; 
 		}
-		//lager array
+		//LAGER ARRAY TIL ROW
 		while ($row = mysql_fetch_assoc($r)) {
 			$rooms[] = $row;
 		}
 
-		// henter alle bookinger
+		// HENTER ALLE BOOKINGER
 		$r = mysql_query("SELECT * FROM bookings");
-
-	
-		// returnerer det modifiserte rom-arrayet
-?>
-<div class = "links">
-<?php		
-
-		$userfloor=$_GET['floor'];
-		
-		$spots = $row['spots'];
-
-		echo $spots;
-		
-
-		echo '<div class = "links">';
-		for ($i=0; $i < count($rooms); $i++) { 
-			if ($rooms[$i]['floor']==$userfloor) {
-			//Lager en separat link for hver id ($rooms[i]['id'] etter hvor mange spots)
-			if($rooms[$i]['spots']==3){
-			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "box" >'.$rooms[$i]['name'].'</div></a>';		
+		?>
+		<div class = "links">
+			<?php
+			$userfloor=$_GET['floor'];
+			$spots = $row['spots'];
+			echo '<div class = "links">';
+			//LAGER EN SEPARAT LINK FOR HVER LINK ETTER HVILKET FLOOR OG HVOR MANGE SPOTS
+			for ($i=0; $i < count($rooms); $i++) { 
+				if ($rooms[$i]['floor']==$userfloor) {
+					if($rooms[$i]['spots']==3){
+						echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "box" >'.$rooms[$i]['name'].'</div></a>';		
+					}
+					if ($rooms[$i]['spots']==4) {
+						echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "bigBox" >'.$rooms[$i]['name'].'</div></a>';		
+					}
+					if($rooms[$i]['spots'] ==2){
+						echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "smallBox" >'.$rooms[$i]['name'].'</div></a>';
+					}
+				}
 			}
-			if ($rooms[$i]['spots']==4) {
-			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "bigBox" >'.$rooms[$i]['name'].'</div></a>';		
-			}
-			if($rooms[$i]['spots'] ==2){
-			echo '<a class="rom-link" href="rom.php?id='.$rooms[$i]['id'].'"><div class = "smallBox" >'.$rooms[$i]['name'].'</div></a>';		
-				
-			}
-
-			}
-		}
-				
-?>
-</div>
-<?php
-
-
-		
-
-
+			?>
+		</div>
+		<?php
 	}
-
 }
-
 function addBooking($roomId,$tid,$date) {
 	
+	$urlid = $_GET['id'];
+	//HENTER UT ROM INFO
+	$result = mysql_query("SELECT * FROM bookings where roomId ='$urlid'") or die(mysql_error());
+	$array = mysql_fetch_assoc($result);
+	if(!$result) {
+		echo "die"; 
+	}
+	//NAVNGIR START OG STOPP FRA MYSQL
+	$start = $array['start'];
+	$stop = $array['stop'];
 	$start = "$date" . " "  . $tid;
 	$stop = date('Y-m-d H:i:s', strtotime("$start + 1 hours"));
 	$ul = $_SESSION ['ul'];
@@ -125,25 +112,14 @@ function addBooking($roomId,$tid,$date) {
 	$checkQuery = "SELECT * FROM `bookings` WHERE roomId = '$roomId' AND start = '$start'";
 	$doQuery = mysql_query($checkQuery);
 	
-
-	
-
 	if(mysql_num_rows($doQuery) == 0){
-		
 		$query = "INSERT INTO `bookings`(`userid`,`roomId`, `start`,`stop`) VALUES ('$ul','$roomId','$start','$stop')";
 		$result = mysql_query($query);
-		echo "LAGT TIL EN BOOKING: ". $start. " TIL : ". $stop;
-		
+		echo "LAGT TIL EN BOOKING: ". $start. " TIL : ". $stop;	
 	}
 	else{
 		echo "denne dagen er allerede booket";
 	}
-
-
-
-
-
-
 }
 
 ?>
