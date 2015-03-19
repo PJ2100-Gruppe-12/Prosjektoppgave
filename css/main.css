@@ -1,13 +1,9 @@
 @charset "utf-8" ;
 body{
     margin: 0 auto;
-}
-#bg {
-    bottom: 0;
-    right: 0;
-    left: 0;
-	z-index: -2;
-    position: absolute;
+    background-image: url(../pic/bg_dobbel2.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 h1{
     margin: 0 auto;
@@ -107,7 +103,7 @@ h1{
 	border: solid black 2px;
 	text-align: center;
 	background-image: url("../pic/personer-3pers-1pers-hvit.png");
-	background-size: 100px 70px;
+	background-size: 100px 90px;
 	background-repeat: no-repeat;
     background-position: center;
 }
@@ -129,7 +125,7 @@ h1{
 	border: solid black 2px;
 	text-align: center;
 	background-image: url("../pic/personer-2pers-2pers-hvit.png");
-	background-size: 100px 70px;
+	background-size: 100px 90px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -195,7 +191,6 @@ p{
 }
 #floor{
 	padding: 10px;
-	margin: 0 auto;
 	height: 60px;
 	width: 250px;
 	font-size: 20px;
