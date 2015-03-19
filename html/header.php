@@ -13,7 +13,7 @@ if (isset($_GET['lo']) && $_GET['lo'] == "true") {
 	<html>
 		<head>
 		<!-- HEAD -->
-		<title>BookingSide</title>
+		<title>Westerdals Oslo ACT - Bookingside for CK32</title>
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 		<meta charset="utf-8">
 	</head>

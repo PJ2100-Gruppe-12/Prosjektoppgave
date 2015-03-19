@@ -17,9 +17,6 @@ if (!empty($_POST)) {
             <a class="link" href="register.php" alt="#">Register her</a><br><br>
         </nav>
 		<div id = "loginBackground">
-			<br/>
-			<br/>
-
 			<form id = "login" method="post">
 			</br>
 				Brukernavn:<br/>
@@ -33,8 +30,13 @@ if (!empty($_POST)) {
 				<input id= "submit" type="submit" value="Logg inn"><br><br>
 
 			</form>	
+			<p>
+				Logg inn med din bruker, eller <nav>
+            <a class="link" href="register.php" alt="#">registrer deg her.</a></nav>
+            <p/>
 		</div>
-
+		<p>
+		</p>
 	</body>
 	</html>
 <?php
