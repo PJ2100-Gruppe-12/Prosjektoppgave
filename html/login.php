@@ -13,9 +13,6 @@ if (!empty($_POST)) {
 ?>
 	
 		<h1>Rombooking CK32</h1><br>
-        <nav>
-            <a class="link" href="register.php" alt="#">Register her</a><br><br>
-        </nav>
 		<div id = "loginBackground">
 			<form id = "login" method="post">
 			</br>
