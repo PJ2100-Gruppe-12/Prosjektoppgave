@@ -2,25 +2,22 @@
 body{
     margin: 0 auto;
 }
+#bg {
+    bottom: 0;
+    right: 0;
+    left: 0;
+	z-index: -2;
+    position: absolute;
+}
 h1{
     margin: 0 auto;
     text-align: center;
 }
-#bg{
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	z-index: -1;
-}
-<<<<<<< HEAD
-#logo{
-=======
 #bgd{
-width: 100%;
-height: 25%;
+	width: 100%;
+	height: 25%;
 }
-#logo {
->>>>>>> origin/master
+#logo{
 	width: 234px;
 	height: 260px;
     margin: 0 auto;
@@ -41,7 +38,7 @@ height: 25%;
 	font-size: 20px;
 	color: black;
 	top: 10px;
-    margin: 0 auto;
+	position:absolute;
 	left: 10px;
 	width: 500px;
 	text-align: center;
@@ -66,14 +63,14 @@ height: 25%;
 	text-align: center;
 }
 #register{
-    position: relative;
     width: 90px;
-    top: 10px;
+    top: 20px;
     margin: 0 auto;
     font-family: helvetica;
     font-size: 22px;
     background-color: #f36f65;
     z-index: 3;
+    border: ridge 2px gray;
 }
 #register:hover{
     background-color: #61afca;
@@ -86,16 +83,6 @@ height: 25%;
 	position: absolute;
 	top: 35%;
 	left: 15%;
-}
-.rom{
-	height: 100px;
-	width: 100px;
-	background-color: red;
-    margin: 0 auto;
-}
-.rom:hover{
-	transition: background 0.2;
-    background-color: red;
 }
 #submit{
 	background-color: #f36f65;
@@ -110,133 +97,143 @@ height: 25%;
 	-webkit-transition: background-color 1s;
 }
 .box{
-    float: left;
-    margin: 10px;
-	border: ridge gray 5px;
-    font-size: 20px;
-	text-align: center; 
-    font-family: helvetica;
-    color: black;
-    background-color: #c4b4b4;
+	height: 120px;
+	width: 120px;
+	margin: 10px;
+	border: solid black 1px;
+	text-align: center;
+	background-color: gray;
+	background-image: url("../pic/personer-3pers-1pers-hvit.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
 }
-#box{
-    margin-left: auto;
-    margin-right: auto;
-    height: 400px;
-    width: 1100px;
-    position: relative;
+.bigBox{
+	height: 120px;
+	width: 120px;
+	margin: 10px;
+	border: solid black 1px;
+	text-align: center;
+	background-color: gray;
+	background-image: url("../pic/4pers-prosjektor.png");
+	background-size: contain;
+	background-position: bottom;
+	background-repeat: no-repeat;
 }
-#rom1:hover, #rom2:hover, #rom3:hover, #rom4:hover, #rom5:hover, #rom6:hover{
-    background-image: url(../pic/prosjektor3.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-#rom7:hover, #rom8:hover, #rom9:hover, #rom10:hover, #rom11:hover, #rom12:hover{
-    background-image: url(../pic/2pers.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#rom1, #rom2, #rom3, #rom4, #rom5, #rom6{
-    height: 150px;
-	width: 150px;
-}
-#rom7, #rom8, #rom9, #rom10, #rom11, #rom12{
-    height: 100px;
-    width: 100px;
-    margin-left: 45px;
+.smallBox{
+	height: 120px;
+	width: 120px;
+	margin: 10px;
+	border: solid black 1px;
+	text-align: center;
+	background-color: gray;
+	background-image: url("../pic/personer-2pers-2pers-hvit.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
 }
 a.rom-link {
+	display: block;
 	width: 100px;
+	text-decoration: none;
+	color: white;
 }
 .ledig{
-	height: 100px;
-	width: 100px;
+	height: 50px;
+	width: 50px;
 	background-color: green;
+	float: left;
+	margin-left: 10px;
+	margin-top: 40%;
 }
 #ikkeledig{
-	height: 100px;
-	width: 100px;
+	height: 50px;
+	width: 50px;
 	background-color: red;	
+	float: left;
+	margin-left: 10px;
+	margin-top: 40%;
 }
 #wrapper{
-<<<<<<< HEAD
-=======
 	margin:0 auto;
-
 }
 .rom-link{
 	margin-left:40px;
 	float: left;
-	 
 }
 .form1{
->>>>>>> origin/master
 	height: auto;
-	width: 100%;
-	z-index: 10;
+	width: auto;
+	margin-top: 20%;
 }
 nav{
-    text-align: center;
-    font-family: helvetica;
-    font-weight: bold;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
+	text-align: center;
+	font-family: helvetica;
+	font-weight: bold;
 }
 .link{
-    transition: 0.3s;
-    color: black;
-    font-size: 26px;
-    padding: 8px;
-    margin: 8px;
-    text-decoration: none;
+	transition: 0.3s;
+	color: black;
+	font-size: 26px;
+	padding: 8px;
+	margin: 8px;
+	text-decoration: none;
 }
 .link:hover{
-    background-color: Black;
-    color: white;
-    padding: 10px 20px;
+	background-color: Black;
+	color: white;
+	padding: 10px 20px;
 }
 p{
-    font-size: 24px;
-    color: orange;
-    text-align: center;
-    font-family: helvetica
+	font-size: 24px;
+	color: orange;
+	text-align: center;
+	font-family: helvetica
 }
 #floor{
-    padding: 10px;
-    margin: 0 auto;
-    height: 60px;
-    width: 250px;
-    font-size: 20px;
-    text-align: center;
-    font-family: helvetica;
-    margin: 0 auto;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
+	padding: 10px;
+	margin: 0 auto;
+	height: 60px;
+	width: 250px;
+	font-size: 20px;
+	text-align: center;
+	font-family: helvetica;
+	margin: 0 auto;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
 }
 .floorbox{
-    color: black;
-    font-weight: bold;
-    font-family: helvetica;
+	color: black;
+	font-weight: bold;
+	font-family: helvetica;
 }
 .floorbox:hover{
-    transition: 0.3s;    
-    background-color: Black;
-    color: white;
-    padding: 5px 10px;
+	transition: 0.3s;    
+	background-color: Black;
+	color: white;
+	padding: 5px 10px;
 }
 a{
-    text-decoration: none;
-    color: black;
-<<<<<<< HEAD
-}
-=======
+	text-decoration: none;
+	color: black;
 }
 .links{
 	width: 900px;
 	height: 400;
 	margin: 0 auto;
 }
->>>>>>> origin/master
+.valg{
+	border:2px solid black;
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-left: 5px;
+}
+.romvalg{
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-left: 5px;
+	border:2px solid black;
+}

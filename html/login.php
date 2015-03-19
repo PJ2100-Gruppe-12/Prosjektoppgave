@@ -14,7 +14,6 @@ if (!empty($_POST)) {
 	
 		<h1>Rombooking CK32</h1><br>
 		<div id = "loginBackground">
-			<div id = "loginText">Her logger du inn din bruker til vårt bookingsystem</div>
 			<br/>
 			<br/>
 			
@@ -29,7 +28,7 @@ if (!empty($_POST)) {
 				<br/>
 				<br/>
 				<input id= "submit" type="submit" value="Logg inn">
-				<input id ="register" href="register.php" value = "Registrer">
+				<div id = "register"><a href="register.php">Registrer</a></div>
 			</form>	
 		</div>
 
