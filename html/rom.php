@@ -19,9 +19,7 @@
 	$timestamp = strtotime($now);
 	
 	
-	
-		
-	
+
 
 	
 
