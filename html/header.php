@@ -22,4 +22,4 @@ if (isset($_GET['lo']) && $_GET['lo'] == "true") {
 
 	<body>
 		<!-- BODY -->
-		<div id = "logo"><img src="../pic/logo.png"></div>
+		<div id = "logo"><img src="../pic/logo.png" alt = "logo" ></div>

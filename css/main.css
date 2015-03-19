@@ -134,6 +134,7 @@ a.rom-link {
 	width: 100px;
 	text-decoration: none;
 	color: black;
+	font-style: helvetica;
 
 }
 .ledig{
@@ -257,4 +258,22 @@ a{
 	font-family: helvetica;
 	font-size: 20px;
 	margin-left: 14%;
+}
+.failure {
+	font-size: 30px;
+	color: red;
+	position: absolute;
+	top:0;
+	font-style: helvetica;
+
+
+
+}
+.success{
+	font-size: 30px;
+	color: #7ec79c;
+	position: absolute;
+	top:0;
+	font-style: helvetica;
+
 }

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 18. Mar, 2015 14:24 
+-- Generation Time: 19. Mar, 2015 15:59 
 -- Server-versjon: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -33,19 +33,7 @@ CREATE TABLE IF NOT EXISTS `bookings` (
   `start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   `stop` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `free` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
-
---
--- Dataark for tabell `bookings`
---
-
-INSERT INTO `bookings` (`id`, `userId`, `roomId`, `start`, `stop`, `free`) VALUES
-(48, 2, 2, '2015-03-17 09:00:00', '2015-03-17 10:00:00', 1),
-(49, 2, 2, '2015-03-17 09:00:00', '2015-03-17 10:00:00', 1),
-(50, 2, 1, '2015-03-17 09:00:00', '2015-03-17 10:00:00', 1),
-(51, 2, 1, '2015-03-17 09:00:00', '2015-03-17 10:00:00', 1),
-(52, 2, 1, '2015-03-12 09:00:00', '2015-03-12 10:00:00', 0),
-(54, 2, 1, '2015-03-18 09:00:00', '2015-03-18 10:00:00', 0);
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -66,78 +54,78 @@ CREATE TABLE IF NOT EXISTS `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `name`, `spots`, `projector`, `floor`) VALUES
-(1, 'Rom1', 4, 1, 1),
-(2, 'Rom2', 3, 0, 1),
-(3, 'Rom3', 4, 1, 1),
-(4, 'Rom4', 3, 0, 1),
-(5, 'Rom5', 3, 0, 1),
-(6, 'Rom6', 4, 1, 1),
-(7, 'rom7', 4, 1, 1),
-(8, 'rom8', 2, 0, 1),
-(9, 'rom9', 3, 0, 1),
-(10, 'rom10', 2, 0, 1),
-(11, 'rom11', 4, 1, 1),
-(12, 'rom12', 2, 0, 1),
-(13, 'rom13', 4, 1, 2),
-(14, 'rom14', 3, 0, 2),
-(15, 'rom15', 2, 0, 2),
-(16, 'rom16', 4, 1, 2),
-(17, 'rom17', 4, 1, 2),
-(18, 'rom18', 2, 0, 2),
-(19, 'rom19', 3, 0, 2),
-(20, 'rom20', 4, 1, 2),
-(21, 'rom21', 3, 0, 2),
-(22, 'rom22', 4, 1, 2),
-(23, 'rom23', 2, 0, 2),
-(24, 'rom24', 2, 0, 2),
-(25, 'rom25', 2, 0, 3),
-(26, 'rom26', 4, 1, 3),
-(27, 'rom27', 4, 1, 3),
-(28, 'rom28', 4, 1, 3),
-(29, 'rom29', 3, 0, 3),
-(30, 'rom30', 3, 0, 3),
-(31, 'rom31', 4, 1, 3),
-(32, 'rom32', 2, 0, 3),
-(33, 'rom33', 3, 0, 3),
-(34, 'rom34', 4, 1, 3),
-(35, 'rom35', 4, 1, 3),
-(36, 'rom36', 2, 0, 3),
-(37, 'rom37', 2, 0, 4),
-(38, 'rom38', 3, 0, 4),
-(39, 'rom39', 4, 1, 4),
-(40, 'rom40', 3, 0, 4),
-(41, 'rom41', 3, 0, 4),
-(42, 'rom42', 2, 0, 4),
-(43, 'rom43', 4, 1, 4),
-(44, 'rom44', 4, 1, 4),
-(45, 'rom45', 4, 1, 4),
-(46, 'rom46', 4, 1, 4),
-(47, 'rom47', 2, 0, 4),
-(48, 'rom48', 3, 0, 4),
-(49, 'rom49', 3, 0, 5),
-(50, 'rom50', 4, 1, 5),
-(51, 'rom51', 4, 1, 5),
-(52, 'rom52', 2, 0, 5),
-(53, 'rom53', 4, 1, 5),
-(54, 'rom54', 3, 0, 5),
-(55, 'rom55', 2, 0, 5),
-(56, 'rom56', 4, 1, 5),
-(57, 'rom57', 4, 1, 5),
-(58, 'rom58', 3, 0, 5),
-(59, 'rom59', 4, 1, 5),
-(60, 'rom60', 3, 1, 5),
-(61, 'rom61', 2, 0, 6),
-(62, 'rom62', 4, 1, 6),
-(63, 'rom63', 4, 1, 6),
-(64, 'rom64', 3, 0, 6),
-(65, 'rom65', 2, 0, 6),
-(66, 'rom66', 3, 0, 6),
-(67, 'rom67', 3, 0, 6),
-(68, 'rom68', 4, 1, 6),
-(69, 'rom69', 4, 1, 6),
-(70, 'rom70', 2, 0, 6),
-(71, 'rom71', 4, 1, 6),
-(72, 'rom72', 3, 0, 6);
+(1, 'Rom 1', 4, 1, 1),
+(2, 'Rom 2', 3, 0, 1),
+(3, 'Rom 3', 4, 1, 1),
+(4, 'Rom 4', 3, 0, 1),
+(5, 'Rom 5', 3, 0, 1),
+(6, 'Rom 6', 4, 1, 1),
+(7, 'Rom 7', 4, 1, 1),
+(8, 'Rom 8', 2, 0, 1),
+(9, 'Rom 9', 3, 0, 1),
+(10, 'Rom 10', 2, 0, 1),
+(11, 'Rom 11', 4, 1, 1),
+(12, 'Rom 12', 2, 0, 1),
+(13, 'Rom 13', 4, 1, 2),
+(14, 'Rom 14', 3, 0, 2),
+(15, 'Rom 15', 2, 0, 2),
+(16, 'Rom 16', 4, 1, 2),
+(17, 'Rom 17', 4, 1, 2),
+(18, 'Rom 18', 2, 0, 2),
+(19, 'Rom 19', 3, 0, 2),
+(20, 'Rom 20', 4, 1, 2),
+(21, 'Rom 21', 3, 0, 2),
+(22, 'Rom 22', 4, 1, 2),
+(23, 'Rom 23', 2, 0, 2),
+(24, 'Rom 24', 2, 0, 2),
+(25, 'Rom 25', 2, 0, 3),
+(26, 'Rom 26', 4, 1, 3),
+(27, 'Rom 27', 4, 1, 3),
+(28, 'Rom 28', 4, 1, 3),
+(29, 'Rom 29', 3, 0, 3),
+(30, 'Rom 30', 3, 0, 3),
+(31, 'Rom 31', 4, 1, 3),
+(32, 'Rom 32', 2, 0, 3),
+(33, 'Rom 33', 3, 0, 3),
+(34, 'Rom 34', 4, 1, 3),
+(35, 'Rom 35', 4, 1, 3),
+(36, 'Rom 36', 2, 0, 3),
+(37, 'Rom 37', 2, 0, 4),
+(38, 'Rom 38', 3, 0, 4),
+(39, 'Rom 39', 4, 1, 4),
+(40, 'Rom 40', 3, 0, 4),
+(41, 'Rom 41', 3, 0, 4),
+(42, 'Rom 42', 2, 0, 4),
+(43, 'Rom 43', 4, 1, 4),
+(44, 'Rom 44', 4, 1, 4),
+(45, 'Rom 45', 4, 1, 4),
+(46, 'Rom 46', 4, 1, 4),
+(47, 'Rom 47', 2, 0, 4),
+(48, 'Rom 48', 3, 0, 4),
+(49, 'Rom 49', 3, 0, 5),
+(50, 'Rom 50', 4, 1, 5),
+(51, 'Rom 51', 4, 1, 5),
+(52, 'Rom 52', 2, 0, 5),
+(53, 'Rom 53', 4, 1, 5),
+(54, 'Rom 54', 3, 0, 5),
+(55, 'Rom 55', 2, 0, 5),
+(56, 'Rom 56', 4, 1, 5),
+(57, 'Rom 57', 4, 1, 5),
+(58, 'Rom 58', 3, 0, 5),
+(59, 'Rom 59', 4, 1, 5),
+(60, 'Rom 60', 3, 1, 5),
+(61, 'Rom 61', 2, 0, 6),
+(62, 'Rom 62', 4, 1, 6),
+(63, 'Rom 63', 4, 1, 6),
+(64, 'Rom 64', 3, 0, 6),
+(65, 'Rom 65', 2, 0, 6),
+(66, 'Rom 66', 3, 0, 6),
+(67, 'Rom 67', 3, 0, 6),
+(68, 'Rom 68', 4, 1, 6),
+(69, 'Rom 69', 4, 1, 6),
+(70, 'Rom 70', 2, 0, 6),
+(71, 'Rom 71', 4, 1, 6),
+(72, 'Rom 72', 3, 0, 6);
 
 -- --------------------------------------------------------
 
@@ -153,20 +141,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `studentnr` int(6) NOT NULL,
   `TLF` varchar(11) NOT NULL,
   `Email` varchar(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Dataark for tabell `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `created`, `studentnr`, `TLF`, `Email`) VALUES
-(1, 'test', 'test', '2015-03-09 16:13:47', 111111, '+4764646464', 'darth@wader.com'),
-(2, 'admin', 'admin', '2015-03-09 17:12:48', 222222, '+4765656565', 'james@bond.com'),
-(8, '1', '1', '2015-03-10 14:22:02', 555555, '+5555555555', 'olve.husby@gmail.com'),
-(9, '', '', '2015-03-11 09:42:39', 123456, '', ''),
-(12, 'olve', 'olve', '2015-03-11 13:57:15', 654321, '+4794949494', '123@123.com'),
-(13, 'Donald', 'Potet', '2015-03-13 11:33:04', 702097, '93061368', 'Super_Chris007@hotmail.com'),
-(14, 'asd', 'asd', '2015-03-13 12:41:03', 121313, '14341341', '132@hotmail.com');
+(2, 'admin', 'admin', '2015-03-09 17:12:48', 222222, '+4765656565', 'james@bond.com');
 
 --
 -- Indexes for dumped tables
@@ -198,7 +180,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=78;
 --
 -- AUTO_INCREMENT for table `rooms`
 --
@@ -208,7 +190,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=73;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

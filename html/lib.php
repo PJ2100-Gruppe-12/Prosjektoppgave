@@ -17,7 +17,8 @@ function login($username, $password) {
 		header("Location: booking.php?floor=1");
 	}
 	else {
-		echo "Failure!";
+		$failureLogin = '<div class = failure>Feil passord eller brukernavn</div>';
+		echo $failureLogin;
 	}
 	return $userid;
 }
@@ -43,12 +44,14 @@ function register($username, $password, $confirmPassword,$sn, $tlf, $email) {
 		}
 		//HVIS IKKE FAILURE
 		else {
-			echo "Failure!";
+			$failurePasswordRegister = '<div class = "failure">Verdiene du har oppgitt er ikke gyldige</div>';
+			echo $failurePasswordRegister;
 		}
 	}
 	//HVIS PW IKKE = CPW ECHO ERROR
 	else {
-		echo "Passordene er ikke like...";
+		$failurePasswordNotSame = '<div class = "failure">"Passordene er ikke like..."</div>';
+		echo $failurePasswordNotSame;
 	}
 }
 
@@ -115,10 +118,11 @@ function addBooking($roomId,$tid,$date) {
 	if(mysql_num_rows($doQuery) == 0){
 		$query = "INSERT INTO `bookings`(`userid`,`roomId`, `start`,`stop`) VALUES ('$ul','$roomId','$start','$stop')";
 		$result = mysql_query($query);
-		echo "LAGT TIL EN BOOKING: ". $start. " TIL : ". $stop;	
+		$successToBook = '<div class = "success">Du har nå booket : rom'.$roomId .'  fra '. $start." til : ". $stop. '</div>';
+		echo $successToBook;
 	}
 	else{
-		echo "denne dagen er allerede booket";
+		echo '<div class = "failure">Denne tiden er allerede booket</div>';
 	}
 }
 
