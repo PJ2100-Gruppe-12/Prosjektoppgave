@@ -13,13 +13,15 @@ if (!empty($_POST)) {
 ?>
 	
 		<h1>Rombooking CK32</h1><br>
-        <nav>
-            <a class="link" href="register.php" alt="#">Register her</a><br><br>
-        </nav>
 		<div id = "loginBackground">
 			<br/>
 			<br/>
-
+			<p>
+				Her logger du deg inn for å booke rom.<br/>
+				For å kunne logge inn må du ha en bruker, hvis du ikke allerede har en bruker må du <nav>
+            <a class="link" href="register.php" alt="#">registrere deg her.</a></nav>
+            <br><br>
+        
 			<form id = "login" method="post">
 			</br>
 				Brukernavn:<br/>
@@ -30,7 +32,7 @@ if (!empty($_POST)) {
 				<input class = "inputField" type="password" name="pw">
 				<br/>
 				<br/>
-				<input id= "submit" type="submit" value="Logg inn"><br><br>
+				<input class= "submit" type="submit" value="Logg inn"><br><br>
 
 			</form>	
 		</div>
