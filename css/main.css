@@ -1,5 +1,6 @@
 @charset "utf-8" ;
 body{
+<<<<<<< HEAD
 	margin: 0 auto;
 }
 #bg {
@@ -8,6 +9,12 @@ body{
 	left: 0;
 	z-index: -2;
 	position: absolute;
+=======
+    margin: 0 auto;
+    background-image: url(../pic/bg_dobbel2.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+>>>>>>> origin/master
 }
 h1{
 	margin: 0 auto;
@@ -130,8 +137,8 @@ h1{
 	text-align: center;
 	background-image: url("../pic/personer-2pers-2pers-hvit.png");
 	background-size: 100px 90px;
-	background-repeat: no-repeat;
-	background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 a.rom-link {
 	display: block;
@@ -195,7 +202,6 @@ p{
 }
 #floor{
 	padding: 10px;
-	margin: 0 auto;
 	height: 60px;
 	width: 250px;
 	font-size: 20px;
