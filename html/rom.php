@@ -37,15 +37,16 @@
 		
 	}
 	else{
-		echo "  "."velg en tid";
+		echo "  ";
 	}
 	
 		
 ?>
  	
 	<form class = "form1" name= "choise" method ="post">
-		<input type="date" name="date">
-		<select name="time">
+		<div class = "tekst">Velg tid og dato for å registrere booking</div><br><br><br>
+		<input id ="date"type="date" name="date">
+		<select id = "time" name="time">
 
 		<option value="10:00:00">10:00</option>
 		<option value="11:00:00">11:00</option>
@@ -58,8 +59,8 @@
 		<option value="18:00:00">18:00</option>
 		<option value="19:00:00">19:00</option>
 		<option value="20:00:00">20:00</option>
-
-	<input name = "submit" id= "submit" type="submit" value="SUBMIT">
+<br><br>
+	<input name = "submit" class ="submit" id= "regtime" type="submit" value="SUBMIT">
 	</select>
 	
 	</form>

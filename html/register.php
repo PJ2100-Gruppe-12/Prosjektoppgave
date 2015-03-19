@@ -47,7 +47,7 @@ if (!empty($_POST)) {
 				Email:<br>
 				<input class ="inputField" type="text" name="email" />
 				<br/><br>
-				<input id = "submit" type="submit" value="Registrer" />
+				<input class= "submit" type="submit" value="Registrer" />
 			</form>	
 		</div>
 	</body>
