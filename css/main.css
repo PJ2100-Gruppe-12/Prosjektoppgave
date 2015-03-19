@@ -5,12 +5,11 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;
 }
-
 h1{
-	margin: 0 auto;
-	text-align: center;
-	font-family: helvetica;
-	font-size: 36px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: helvetica;
+    font-size: 36px;
 }
 #bgd{
 	width: 100%;
@@ -19,17 +18,17 @@ h1{
 #logo{
 	width: 234px;
 	height: 260px;
-	margin: 0 auto;
-	margin-top: 10px;
-	text-align: center;
-	font-size: 20px;
-	padding: 26px;
-	font-family: helvetica;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 26px;
+    font-family: helvetica;
 }
 #loginBackground{
 	height: auto;
 	width: 500px;
-	margin: 0 auto;
+    margin: 0 auto;
 	border: solid black 1px;
 	background-color: white;
 }
@@ -62,17 +61,17 @@ h1{
 	text-align: center;
 }
 #register{
-	width: 90px;
-	top: 20px;
-	margin: 0 auto;
-	font-family: helvetica;
-	font-size: 22px;
-	background-color: #f36f65;
-	z-index: 3;
-	border: ridge 2px gray;
+    width: 90px;
+    top: 20px;
+    margin: 0 auto;
+    font-family: helvetica;
+    font-size: 22px;
+    background-color: #f36f65;
+    z-index: 3;
+    border: ridge 2px gray;
 }
 #register:hover{
-	background-color: #61afca;
+    background-color: #61afca;
 	-webkit-transition: background-color 1s;
 }
 #bgMap{
@@ -83,8 +82,8 @@ h1{
 	top: 35%;
 	left: 15%;
 }
-.submit{
-	transition: 0.5s;
+#submit{
+    transition: 0.5s;
 	background-color: white;
 	width: 150px;
 	height: 60px;
@@ -92,7 +91,7 @@ h1{
 	font-family: helvetica;
 	position: relative;
 }
-.submit:hover{
+#submit:hover{
 	background-color: Black;
 	color: white;
 	padding: 10px 20px;
@@ -106,7 +105,7 @@ h1{
 	background-image: url("../pic/personer-3pers-1pers-hvit.png");
 	background-size: 100px 90px;
 	background-repeat: no-repeat;
-	background-position: center;
+    background-position: center;
 }
 .bigBox{
 	height: 120px;
@@ -116,7 +115,7 @@ h1{
 	text-align: center;
 	background-image: url("../pic/4pers-prosjektor.png");
 	background-size: 100px 90px;
-	background-position: center;
+    background-position: center;
 	background-repeat: no-repeat;
 }
 .smallBox{
@@ -134,7 +133,7 @@ a.rom-link {
 	display: block;
 	width: 100px;
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 .ledig{
 	height: 50px;
@@ -160,11 +159,11 @@ a.rom-link {
 	float: left;
 }
 .form1{
-	margin: 0 auto;
-	padding: 10px;
-	height: 300px;
-	width: 500px;
-	border: solid 1px black;
+    margin: 0 auto;
+    padding: 10px;
+    height: 300px;
+    width: 200px;
+    border: solid 1px black;
 }
 nav{
 	text-align: center;
@@ -209,7 +208,7 @@ p{
 }
 .floorbox:hover{
 	transition: 0.3s;    
-	background-color: black;
+	background-color: Black;
 	color: white;
 	padding: 5px 10px;
 }
@@ -235,23 +234,4 @@ a{
 	float: left;
 	margin-left: 5px;
 	border:2px solid black;
-
-}
-#time, #date{
-	width: 200px;
-	height: 40px;
-	text-align: center;
-	font-size: 20px;
-	margin-left: 5%;
-	font-size: 20px;
-
-}
-#regtime{
-	margin-left: 35%;
-	margin-top: 10%;
-}
-.tekst{
-	font-family: helvetica;
-	font-size: 20px;
-	margin-left: 14%;
 }

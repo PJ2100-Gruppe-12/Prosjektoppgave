@@ -9,7 +9,7 @@ if (isset($_GET['lo']) && $_GET['lo'] == "true") {
 
 ?>
 
-<!DOCTYPE html>
+<DOCTYPE html>
 	<html>
 		<head>
 		<!-- HEAD -->
@@ -21,3 +21,11 @@ if (isset($_GET['lo']) && $_GET['lo'] == "true") {
 	<body>
 		<!-- BODY -->
 		<div id = "logo"><img src="../pic/logo.png"></div>
+		<div id ="wrapper">
+			
+			
+		</div><br>
+<?php
+
+		
+?>

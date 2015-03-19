@@ -1,9 +1,7 @@
 <?php
 include 'lib.php';
 if (!empty($_POST)) {
-
-    register($_POST['un'], $_POST['pw'], $_POST['cpw'], $_POST['sn'],$_POST['tlf'], $_POST['email']);
-
+	register($_POST['un'], $_POST['pw'], $_POST['cpw'], $_POST['sn'], $_POST['pn'],$_POST['tlf'], $_POST['email']);
 }
 ?>
 
